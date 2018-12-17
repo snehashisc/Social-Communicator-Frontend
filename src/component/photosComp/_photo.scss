@@ -429,6 +429,13 @@
         border-radius: 8px;
         color: white;
     }
+    .upload-album{
+        background-color: #ff5e3a !important;
+        border-color: #d8dbe6 !important;
+        border-radius: 8px;
+        color: white;
+        margin-left:425px;
+    }
     .add-photos{
         border-color:#d8dbe6 !important;
         border-radius:8px;
@@ -582,4 +589,8 @@
         position: absolute;
         top: 280px;
     }
+}
+
+.video-corner{
+    margin-left: 400px;
 }

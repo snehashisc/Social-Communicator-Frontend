@@ -9,12 +9,13 @@ const VideoGalleryHeader = (props) => {
                 <div className="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 photo-gallery-row">
                     <div className="ui-block responsive-flex">
                         <div className="ui-block-title">
-                            <div className="h6 gallery-header-title">James’s Featured Video</div>
+                            <div className="h6 gallery-header-title">James’s Video Gallery</div>
 
                             <div className="block-btn align-right">
-                                <a href="#/" data-toggle="modal" data-target="#create-photo-album" className="btn btn-primary btn-md-2">Upload Videos +</a>
+                                <a href="#/" data-toggle="modal" data-target="#upload-video-album" className="btn btn-md-2 upload-album">Upload Videos +</a>
                             </div>
-                                <a href="#/" className="more">More</a>
+                            
+                            <a href="#/" className="more">More</a>
                         </div>
                     </div>
                 </div>
