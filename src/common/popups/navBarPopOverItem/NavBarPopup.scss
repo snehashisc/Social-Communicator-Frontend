@@ -1,0 +1,174 @@
+
+.navBarHeadingContainer{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-self: center;
+    margin: 0px 0px 0px 30px;
+    align-content: space-around;
+    font-size: 10px;
+    font-weight: bold;
+    align-items: stretch;
+}
+
+.eventsButton{
+    display: grid;
+    width: 100%;
+    height: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-self: center;
+    align-content: space-around;
+    font-size: 10px;
+    font-weight: bold;
+    align-items: stretch;
+
+    .btn.btn-primary{
+        height: 60px;
+        top: 5%;
+        width: 106%;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        left: -13px;
+    }
+
+}
+
+.popUpContainer{
+    display: grid;
+    height: 290px;
+    overflow: auto;
+    width: 97%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-self: center;
+    margin: 10px 0px 0px 30px;
+    align-items: stretch;
+
+    .friendContainer{
+        display: grid;
+        height: 90px;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-top: 1px solid lightgray;
+        //align-items: stretch;
+        align-content: space-around;
+        left:-30px;
+    }
+    img{
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 18px 0px 0px 0px;
+        left: 35px;
+        position: relative;
+    }
+    .detailsView{
+        float: left;
+        position: relative;
+        left: -10% !important;
+        top: 18px;
+        align-items: stretch;
+        width: 1000%;
+        align-items: baseline;
+        .userName{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .description{
+            font-size:12px;
+        }
+    }
+
+    .requestContainer{
+        position: relative;
+        top: 20px;
+        left: 17px;
+        .glyphicon.glyphicon-remove{
+            top: -26px;
+            right: -15px;
+            font-size: 8px;
+        }
+    }
+
+    .acceptRequest , .rejectRequest{
+        width: 30px;
+        height: 30px;
+        border-radius: 15%;
+        display: inline-block;
+    }
+    .acceptRequest{
+        background: #38a9ff;
+        margin: 0px 10px;
+        .glyphicon.glyphicon-plus{
+            padding:8px;
+        }
+    }
+
+    .rejectRequest{
+        background: #9a9fbf;
+        .glyphicon.glyphicon-minus{
+            padding:8px;
+        }
+    }
+
+    .requestContainer:after{
+        content: '\2807';
+        font-size: 20px;
+        transform: rotate(90deg);
+        display: inline-block;
+        top: -20px;
+        left: -10px;
+        position: relative;
+    }
+
+}
+
+.popover.right>.arrow{
+    left: 120px;
+    margin-top: -23px;
+    border-right-color: #999;
+    border-right-color: rgba(0,0,0,.25);
+    border-left-width: 0;
+    display: inline-block;
+    position: relative;
+    transform: rotate(90deg);
+    bottom: 11px;
+}
+
+
+.mainPopOverContainer{
+    display: block;
+    top: 80px !important;
+    max-width: 70% !important;
+    max-height: 60%;
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    
+}
+
+@media only screen and (min-width : 481px) and (max-width : 767px) {
+    
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+    .mainPopOverContainer{
+        left:56%;
+    }
+}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px)  {
+    .mainPopOverContainer{
+        left:56%;
+    }
+}
+
+
+@media only screen and (min-width: 1281px) {
+    .mainPopOverContainer{
+        left:69%;
+    }
+}
