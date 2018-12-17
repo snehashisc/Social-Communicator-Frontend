@@ -19,7 +19,7 @@ class Profile extends React.Component {
                              <div className = "ui-block profile">
                                  <div className ="top-header">
                                     <div className ="top-header-thumb">
-                                    <img src="./images/top-header1.jpg" alt="coverpic"/>
+                                    <img src={require("../../images/top-header1.jpg")} alt="coverpic"/>
                                     </div>
                                  <div className="profile-section">
                                          <div className="row">
