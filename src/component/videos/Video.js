@@ -13,7 +13,6 @@ const Video = (props) => {
                 
                 <Player
                   className = "test-hover"
-                  
                   poster={props.path}
                   src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
                 >
