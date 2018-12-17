@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import Profile from './component/profileComp/ProfileComp';
 import Header  from './common/header/Header.js';
@@ -10,6 +11,11 @@ const AppRouter = () => (
     <Header />
     <LeftSideBarMenu />
     <ChatMenuBar />
+    <HashRouter>
+        <Switch>
+          <Route path="/" name="Home" component={Profile} />
+        </Switch>
+		  </HashRouter> 
     <Profile />
   </Fragment>
 );

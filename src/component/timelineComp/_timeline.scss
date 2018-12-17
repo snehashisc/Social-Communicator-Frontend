@@ -1,0 +1,49 @@
+.timeline-component {
+    display: block;
+    .ui-block-content {
+        padding: 24px 23px 23px;
+    }
+}
+
+.ui-block-timeline {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #e6ecf5;
+    margin-bottom: 15px;
+    .control-block-button.post-control-button {
+        a {
+            background: #9a9fbf;
+            display: block;
+            border-radius: 35px;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            padding: 6px;
+            left: -2px;
+            position: relative;
+            top: -19px;
+            font-size: 13px;
+            color: white;
+        }
+    }
+    .post-additional-info {
+        font-size: 11px;
+    }
+    .names-people-likes a {
+        color: black;
+        font-size: 13px;
+    }
+    .comments-shared {
+        left: 27%;
+    }
+}
+
+.w-last-photo li {
+    width: 33.33%;
+    float: left;
+    padding: 0 4px 4px 0;
+    overflow: hidden;
+}
+
+
+
