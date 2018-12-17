@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.scss';
-
+import Profile from './src/component/profileComp/ProfileComp';
+import Header  from './common/header/Header.js';
+import LeftSideBarMenu  from './common/leftSideBarMenu/LeftSideBarMenu.js';
+import ChatMenuBar  from './common/chatMenu/chatMenuBar.js';
 
 const AppRouter = () => (
-  <div>
-  
-  </div>
+  <Fragment>
+    <Header />
+    <LeftSideBarMenu />
+    <ChatMenuBar />
+    <Profile />
+  </Fragment>
 );
 
 
