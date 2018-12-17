@@ -16,7 +16,6 @@ const AppRouter = () => (
           <Route path="/" name="Home" component={Profile} />
         </Switch>
 		  </HashRouter> 
-    <Profile />
   </Fragment>
 );
 

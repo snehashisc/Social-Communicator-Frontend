@@ -36,14 +36,13 @@ class Profile extends React.Component {
                                                     </li>
                                                 </ul>
 							                </div>
-                                            <div className="col col-lg-2"></div>
                                          <div className="col col-lg-5 ml-auto col-md-5 col-sm-12 col-12">
                                             <ul className="profile-menu">
                                                 <li>
                                                     <Link to="/photos"> Photos</Link>
                                                 </li>
                                                 <li>
-                                                    <a href="09-ProfilePage-Videos.html">Videos</a>
+                                                    <Link to="/videos"> Videos</Link>
                                                 </li>
                                                 <li>
                                                     {/*<div class="more">
@@ -75,7 +74,9 @@ class Profile extends React.Component {
                 </div>
                 </div>
                 </div>
-            
+                
+
+                <ProfileRoutes />
                 </Fragment>
 		);
 	}
