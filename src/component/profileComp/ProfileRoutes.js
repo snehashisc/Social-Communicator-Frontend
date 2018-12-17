@@ -2,7 +2,7 @@ import React ,{Fragment}from 'react';
 import { Route } from 'react-router-dom';
 
 import Timeline from '../../common/footer/Footer';
-import Header from '../../common/header/header';
+import Header from '../../common/header/Header';
 
 class DefaultLayout extends React.Component{ 
 	render(){
