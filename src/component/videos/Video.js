@@ -1,6 +1,6 @@
 import React from 'react';
 import '../photosComp/_photo.scss';
-import { Player } from 'video-react';
+import { Player, BigPlayButton } from 'video-react';
 
 
 const Video = (props) => {
@@ -10,9 +10,15 @@ const Video = (props) => {
                 <div className="image-content">
                         <span className="image-content-more">More</span>
                 </div>
-                <img className = "test-hover1" src={props.path} alt="Italian Trulli" />
-                <Player playsInline poster="/assets/poster.png" src="https://www.youtube.com/watch?v=excVFQ2TWig"/>
-                    
+                
+                <Player
+                  className = "test-hover"
+                  
+                  poster={props.path}
+                  src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+                >
+                    <BigPlayButton position="center" />
+                </Player>
             </div>
             <div className= 'imgFooter'> 
                 <h5>{props.title}</h5>

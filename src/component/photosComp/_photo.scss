@@ -1,3 +1,4 @@
+@import "~video-react/styles/scss/video-react";
 .col-4-width {
     width: 25%;
 }
@@ -593,4 +594,15 @@
 
 .video-corner{
     margin-left: 400px;
+}
+
+.video-react-big-play-button.video-react-big-play-button-center.test-hover{
+    border-radius: 100px;
+    width: 35px;
+    height: 35px;
+    padding: 22px;
+}
+
+.video-react .video-react-big-play-button.video-react-big-play-button-center{
+    left: 60% !important;
 }
