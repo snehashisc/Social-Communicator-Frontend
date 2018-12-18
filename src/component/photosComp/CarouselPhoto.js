@@ -7,7 +7,7 @@ const CarouselPhoto = (props) => {
             <div className="container carouselPhotoAlbum">
                 <div id={"myCarousel"+props.idImage} className="carousel slide" data-ride="false">
                     
-                    <ol className="carousel-indicators">
+                    <ol className="carousel-indicators indicator-height">
                         <li data-target={"#myCarousel"+props.idImage} data-slide-to="0" className="carousal-background active"></li>
                         <li data-target={"#myCarousel"+props.idImage} data-slide-to="1" className="carousal-background"></li>
                     </ol>
