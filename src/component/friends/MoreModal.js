@@ -5,7 +5,7 @@ const MoreModal = (props) => {
     return (
         <div  className="more-dropdown" id={props.modalId} role="dialog">
             <div className="modal-dialog">
-                <div className="modal-content">
+                <div className="modal-content more-height">
                     <div className="modal-body">
                         {props.listOptions}
                     </div>
