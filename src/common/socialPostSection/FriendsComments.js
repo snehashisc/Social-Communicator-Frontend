@@ -65,7 +65,7 @@ const FriendsComments = (props) => {
                 </li>
             </ul>
 
-        <div className="ps__scrollbar-x-rail"><div className="ps__scrollbar-x" tabindex="0" ></div></div><div className="ps__scrollbar-y-rail" ><div className="ps__scrollbar-y" tabindex="0" ></div></div>
+        <div className="ps__scrollbar-x-rail"><div className="ps__scrollbar-x" ></div></div><div className="ps__scrollbar-y-rail" ><div className="ps__scrollbar-y"  ></div></div>
         
         </div>
     );

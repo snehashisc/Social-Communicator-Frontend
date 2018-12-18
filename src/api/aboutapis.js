@@ -17,10 +17,10 @@ const personalInfo = {
 	
 };
 
-const socialMediaLinks={
+// const socialMediaLinks={
 
 		
-};
+// };
 
 const hobbiesAndInterest = {
 	"Hobbies": "I like to ride the bike to work, swimming, and working out. I also like reading design magazines",

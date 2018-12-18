@@ -1,5 +1,5 @@
 import React from 'react';
-import {ThemeContext} from './theme-context';
+//import {ThemeContext} from './theme-context';
 import MoreModal from './MoreModal';
 
 
@@ -23,7 +23,7 @@ class MoreFeatures extends React.Component  {
     render(){
         var listItems = this.state.more.map(function(data, index){
             return (
-                <li><a href="#">{data}</a></li>
+                <li><a href="/">{data}</a></li>
             );
         });
 

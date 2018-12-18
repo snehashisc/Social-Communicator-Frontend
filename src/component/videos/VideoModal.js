@@ -1,5 +1,5 @@
 import React from 'react';
-import { Player, BigPlayButton } from 'video-react';
+import { Player } from 'video-react';
 
 const VideoModal = (props) => {
     return (
@@ -9,7 +9,7 @@ const VideoModal = (props) => {
                             <button type="button" className="close" data-dismiss="modal">&times;</button>
                             <div className="modal-body">
                                 <div className="open-photo-thumb">
-                                    <Player className = "test-hover" poster={props.path}  autoPlay="true" playsInline="true" muted="true" src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"/>
+                                    <Player className = "test-hover" poster={props.path}  autoPlay={true} playsInline={true} muted={true} src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"/>
                                 </div>
                             </div>
                     </div>

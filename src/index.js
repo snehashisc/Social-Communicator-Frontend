@@ -15,7 +15,7 @@ import * as photoAlbumAction from './actions/photoAlbumAction';
 import * as videoAlbumAction from './actions/videoAlbumAction';
 
 
-import {HashRouter , Route, Switch} from 'react-router-dom';
+import {HashRouter, Switch} from 'react-router-dom';
 
 const store = createStore(rootReducer);
 store.dispatch(aboutActions.getAbout());

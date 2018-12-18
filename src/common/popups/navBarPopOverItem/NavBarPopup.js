@@ -60,9 +60,9 @@ class FriendRequestPopup extends React.Component {
 
 class SideBarRendering extends React.Component {
     
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
     render () {
         
         var listItems = this.props.listData.map(function(data, index){
@@ -70,17 +70,17 @@ class SideBarRendering extends React.Component {
                 <li className="nav-item friendContainer" key={index} >   
                     <img src={data.imagePath} alt='' />
                     <div className="detailsView">
-                        <span className="nav-link active userName" href="/">{data.name}</span><br/>
-                        <span className="nav-link active description" href="/">{data.content}</span>
+                        <span className="nav-link active userName" >{data.name}</span><br/>
+                        <span className="nav-link active description" >{data.content}</span>
                     </div>
                     <div className="requestContainer">
                         
 
-                        <a className="acceptRequest">
+                        <a className="acceptRequest" href="/">
                             <span className="glyphicon glyphicon-plus">
                             </span>
                         </a>
-                        <a className="rejectRequest">
+                        <a className="rejectRequest" href="/">
                             <span className="glyphicon glyphicon-minus">
                             </span>
                         </a>

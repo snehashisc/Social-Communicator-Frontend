@@ -17,7 +17,7 @@ class VideosGallery extends React.Component {
                             <div className="tab-content">
                                     {
                                     albums.videos.map((video, index) => {
-                                        return <Video className='imageClass' key={video.videoTitle + index} path= {video.path} title={video.videoTitle} published = {video.published} idVideo={video.id} />
+                                        return <Video className='imageClass' key={index} path= {video.path} title={video.videoTitle} published = {video.published} idVideo={video.id} />
                                     })
                                 }
                             </div>

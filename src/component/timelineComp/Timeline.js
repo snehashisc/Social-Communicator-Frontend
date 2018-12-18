@@ -9,42 +9,42 @@ class Timeline extends React.Component {
         return (
 				<div className="row timeline-component">
 					<div className="col col-xl-3 order-xl-1 col-lg-3 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12">
-                    <div class="ui-block">
-				<div class="ui-block-title">
-					<h6 class="title">Profile Intro</h6>
+                    <div className="ui-block">
+				<div className="ui-block-title">
+					<h6 className="title">Profile Intro</h6>
 				</div>
-				<div class="ui-block-content">
+				<div className="ui-block-content">
 
 					
 					
-					<ul class="widget w-personal-info item-block">
+					<ul className="widget w-personal-info item-block">
 						<li>
-							<span class="title">About Me:</span>
-							<span class="text">Hi, I’m James, I’m 36 and I work as a Digital Designer for the  “Daydreams” Agency in Pier 56.</span>
+							<span className="title">About Me:</span>
+							<span className="text">Hi, I’m James, I’m 36 and I work as a Digital Designer for the  “Daydreams” Agency in Pier 56.</span>
 						</li>
 						<li>
-							<span class="title">Favourite TV Shows:</span>
-							<span class="text">Breaking Good, RedDevil, People of Interest, The Running Dead, Found,  American Guy.</span>
+							<span className="title">Favourite TV Shows:</span>
+							<span className="text">Breaking Good, RedDevil, People of Interest, The Running Dead, Found,  American Guy.</span>
 						</li>
 						<li>
-							<span class="title">Favourite Music Bands / Artists:</span>
-							<span class="text">Iron Maid, DC/AC, Megablow, The Ill, Kung Fighters, System of a Revenge.</span>
+							<span className="title">Favourite Music Bands / Artists:</span>
+							<span className="text">Iron Maid, DC/AC, Megablow, The Ill, Kung Fighters, System of a Revenge.</span>
 						</li>
 					</ul>
 					
 					
 					
-					<div class="widget w-socials">
-						<h6 class="title">Other Social Networks:</h6>
-						<a href="#/" class="social-item bg-facebook">
+					<div className="widget w-socials">
+						<h6 className="title">Other Social Networks:</h6>
+						<a href="#/" className="social-item bg-facebook">
 					
 							Facebook
 						</a>
-						<a href="#/" class="social-item bg-twitter">
+						<a href="#/" className="social-item bg-twitter">
 							
 							Twitter
 						</a>
-						<a href="#/" class="social-item bg-dribbble">
+						<a href="#/" className="social-item bg-dribbble">
 							
 							Dribbble
 						</a>
@@ -68,13 +68,13 @@ class Timeline extends React.Component {
                         </div>
 					</div>
                     <div className="col col-xl-3 order-xl-1 col-lg-3 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12">
-                        <div class="ui-block">
-                            <div class="ui-block-title">
-                                <h6 class="title">Last Photos</h6>
+                        <div className="ui-block">
+                            <div className="ui-block-title">
+                                <h6 className="title">Last Photos</h6>
                             </div>
-				<div class="ui-block-content">
+				<div className="ui-block-content">
 					
-					<ul class="widget w-last-photo js-zoom-gallery">
+					<ul className="widget w-last-photo js-zoom-gallery">
 						<li>
 							<a href="img/last-photo10-large.jpg">
 								<img src={require("../../images/last-photo10-large.jpg")} alt="photo2"/>

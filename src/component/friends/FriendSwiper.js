@@ -27,10 +27,10 @@ class FriendSwiper extends React.Component  {
                             </div>
                             <div className= "row">
                                 <div className="control-block-button">
-                                     <a href="#" className="btn btn-control bg-blue">
+                                     <a href="/" className="btn btn-control bg-blue">
                                         
                                      </a>
-                                     <a href="#" className="btn btn-control bg-purple">
+                                     <a href="/" className="btn btn-control bg-purple">
                                      </a>
                                 </div>     
                              </div>

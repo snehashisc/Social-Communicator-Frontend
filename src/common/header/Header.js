@@ -14,13 +14,9 @@ import {
     InputGroup,
     Glyphicon,
     Badge,
-
-    ButtonToolbar,
-    DropdownButton,
-    MenuItem
 } from 'react-bootstrap'
 
-import ProfileHoverPanel from '../popups/profileSettings/ProfileHoverPanel.js'
+//import ProfileHoverPanel from '../popups/profileSettings/ProfileHoverPanel.js'
 
 import NavBarPopup from '../popups/navBarPopOverItem/NavBarPopup.js'
 //lg , md , sm ,xs

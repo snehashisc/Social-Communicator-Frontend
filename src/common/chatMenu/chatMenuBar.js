@@ -1,8 +1,8 @@
 import React from 'react';
 
-import chatMenuBarScss from './chatMenuBar.scss';
+import  './chatMenuBar.scss';
 
-import {Nav, NavItem, Navbar, NavDropdown, MenuItem, Glyphicon} from 'react-bootstrap';
+import { Navbar} from 'react-bootstrap';
 
 const leftSidebarRoutes = [
   { path: '/', exact: true, name: 'Caroll Summers', component: "Header" , imagePath : require("../../images/avatar67-sm.jpg") },

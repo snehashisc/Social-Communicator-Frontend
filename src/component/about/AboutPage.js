@@ -1,21 +1,13 @@
 import React from 'react';
-import aboutapis from '../../api/aboutapis';
+//import aboutapis from '../../api/aboutapis';
 import PersonalInfo from './PersonalInfo';
 import EducationAndEmployement from './EducationAndEmployement';
 import HobbiesAndInterests from './HobbiesAndInterests';
-import * as aboutActions from '../../actions/aboutActions';
+//import * as aboutActions from '../../actions/aboutActions';
 import { connect } from 'react-redux';
 import './about.scss';
 
 class AboutPage extends React.Component{
-	constructor(props, context){
-		super(props, context);
-		// this.state = {
-		// 	personalInfo : aboutapis.personalInfo,
-		// 	hobbiesAndInterest : aboutapis.hobbiesAndInterest,
-		// 	educationAndEmployement : aboutapis.educationAndEmployement
-		// }
-	}
 
 	// componentWillMount() {
 	//    this.props.dispatch(aboutActions.getAbout());

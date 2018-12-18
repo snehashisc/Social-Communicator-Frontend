@@ -1,16 +1,21 @@
 import React from 'react';
 
-import leftSideBarMenu from './_leftSideBarMenu.scss';
+import './_leftSideBarMenu.scss';
 
-import {Nav, NavItem, Navbar, NavDropdown, MenuItem, Glyphicon} from 'react-bootstrap';
+import { Navbar} from 'react-bootstrap';
+
+import FriendsGallery from '../../component/friends/FriendsGallery';
 import PhotosGallery from '../../component/photosComp/PhotosGallery';
+import VideosGallery from '../../component/videos/VideosGallery';
+
+
 import { Link } from 'react-router-dom';
 
 const leftSidebarRoutes = [
   { path: '/', exact: true, name: 'Collapse Menu', component: "Header" , imagePath : require("../../images/crossIcon.png") },
-  { path: '/friendsList', exact: true, name: 'NewsFeed', component: "friendGalary" , imagePath : require("../../images/newsfeed.png") },
-  { path: '/videosList', exact: true, name: 'Fav Pages Feed', component: "Header" , imagePath : require("../../images/star.png") },
-  { path: '/photosList', exact: true, name: 'FriendGroups', component: "Header" , imagePath : require("../../images/conference.png") },
+  { path: '/friendsList', exact: true, name: 'NewsFeed', component: {FriendsGallery} , imagePath : require("../../images/newsfeed.png") },
+  { path: '/videosList', exact: true, name: 'Fav Pages Feed', component: {VideosGallery} , imagePath : require("../../images/star.png") },
+  { path: '/photosList', exact: true, name: 'FriendGroups', component: {PhotosGallery} , imagePath : require("../../images/conference.png") },
   { path: '/', exact: true, name: 'Music & Playlits', component: "Header" , imagePath : require("../../images/headphones.png") },
   { path: '/', exact: true, name: 'Weather App', component: "Header" , imagePath : require("../../images/storm.png") },
   { path: '/', exact: true, name: 'Calendar and Events', component: "Header" , imagePath : require("../../images/calendar.png") },
