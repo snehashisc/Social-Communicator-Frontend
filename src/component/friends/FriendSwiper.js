@@ -7,8 +7,8 @@ class FriendSwiper extends React.Component  {
     static contextType = ThemeContext;
     render(){
         return (
-            <div id={"friendCarousel" + this.context.swiper.id} className="carousel slide" data-ride="false">
-                <Carousel interval={null} controls={false} className="carousel-inner">
+            <div id={"friendCarousel" + this.context.swiper.id} className="carousel-friend slide" data-ride="false">
+                <Carousel interval={null} controls={false} className="carousel-inner-friend">
                   <Carousel.Item>
                     <div className="item  active">
                             <div className= "row">
