@@ -85,15 +85,15 @@ class Header extends React.Component {
         }
     };
     render() {
-        let boxClass = ["iconContainer"];
-        console.log(this.state.friendPopup,'this.state.friendPopup',this.state.messagePopup)
-        if(this.state.friendPopup === true) {
-            boxClass.push('si1');
-        }
-        if(this.state.messagePopup === true) {
-            boxClass.push('si2');
-        }
-        console.log(boxClass)
+        // let boxClass = ["iconContainer"];
+        // console.log(this.state.friendPopup,'this.state.friendPopup',this.state.messagePopup)
+        // if(this.state.friendPopup === true) {
+        //     boxClass.push('si1');
+        // }
+        // if(this.state.messagePopup === true) {
+        //     boxClass.push('si2');
+        // }
+        // console.log(boxClass)
         return (
             <Fragment>
 			    <Row className="show-grid">

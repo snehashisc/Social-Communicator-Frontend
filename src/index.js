@@ -14,6 +14,9 @@ import * as friendsActions from './actions/friendsActions';
 import * as photoAlbumAction from './actions/photoAlbumAction';
 import * as videoAlbumAction from './actions/videoAlbumAction';
 
+
+import {HashRouter , Route, Switch} from 'react-router-dom';
+
 const store = createStore(rootReducer);
 store.dispatch(aboutActions.getAbout());
 store.dispatch(friendsActions.getFriends());
@@ -22,7 +25,11 @@ store.dispatch(videoAlbumAction.videoAlbumAction());
 
 ReactDOM.render(
 	<Provider store={store}>
-		<App />
+	 <HashRouter>
+	 	<Switch>
+			<App />
+		</Switch>
+	 </HashRouter>
 	</Provider>	, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
