@@ -3,7 +3,7 @@
     border-radius: 5px;
     border: 1px solid #e6ecf5;
     margin-bottom: 15px;
-    overflow-y: -webkit-paged-x;
+    overflow-y: -webkit-paged-x !important;
 }
 .friend-item {
     border-radius: 5px;
@@ -111,7 +111,7 @@
 }
 .friend-since{
     font-size: 12px;
-    margin-bottom: 0px;
+    //margin-bottom: 0px;
 
     span:first-child {
         font-size: 11px;
@@ -122,11 +122,15 @@
         font-size: 14px
     }
 }
-
+.control-block-button{
+    position:relative;
+    left:50px;
+    top:25px;
+}
 .carousel  {
     position: relative;
     width: 200px;
-    height: 80px;
+    height: 180px !important;
   }
   
   ol.carousel-indicators  {
@@ -159,7 +163,8 @@
 
 
 .carousel-inner {
- margin-bottom: 25px;
+    margin-bottom: 25px;
+    font-size: 14px;
     .title{
         color: #9a9fbf;
         margin-bottom: 25px;
@@ -173,7 +178,7 @@
     .friend-since{
         span{
             color: #9a9fbf;
-            margin-bottom: 25px;
+            margin-bottom: 25px !important;
         } 
         .h6 {
             font-size: 15px;
