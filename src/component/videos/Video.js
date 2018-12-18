@@ -8,9 +8,9 @@ const Video = (props) => {
             <div className="photo-album-item">
                 <a href="/" data-toggle="modal" data-target={"#myModal"+props.idVideo}>
                     <img className = "test-hover1" src={props.path} alt="Italian Trulli" />
-                   
+
                     <div className="image-content">
-                            <span className="image-content-more">More</span>
+                        <span className="image-content-more">More</span>
                     </div>
                 </a>    
                 <VideoModal modalId={"myModal"+props.idVideo}/>
@@ -28,9 +28,5 @@ const Video = (props) => {
        
     );
 };
-// <video  width="255" height="240" controls>
-//                     <source src="https://www.youtube.com/watch?v=excVFQ2TWig" type="video/mp4" />
-//                   </video>  
-
 
 export default Video;
