@@ -6,6 +6,11 @@ import Header  from './common/header/Header.js';
 import LeftSideBarMenu  from './common/leftSideBarMenu/LeftSideBarMenu.js';
 import ChatMenuBar  from './common/chatMenu/chatMenuBar.js';
 
+import FriendsGallery from './component/friends/FriendsGallery';
+import PhotosGallery from './component/photosComp/PhotosGallery';
+import VideosGallery from './component/videos/VideosGallery';
+
+
 const AppRouter = () => (
   <Fragment>
     <Header />
@@ -13,7 +18,10 @@ const AppRouter = () => (
     <ChatMenuBar />
     <HashRouter>
         <Switch>
-          <Route path="/" name="Home" component={Profile} />
+          <Route path="/" exact name="Home" component={Profile} />
+          <Route path="/friendsList" exact name="FriendsGallery" component={FriendsGallery} />
+          <Route path="/photosList" exact name="PhotosGallery" component={PhotosGallery} />
+          <Route path="/videosList" exact name="VideosGallery" component={VideosGallery} />
         </Switch>
 		  </HashRouter> 
   </Fragment>

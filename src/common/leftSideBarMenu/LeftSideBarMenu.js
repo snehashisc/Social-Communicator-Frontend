@@ -3,11 +3,14 @@ import React from 'react';
 import leftSideBarMenu from './_leftSideBarMenu.scss';
 
 import {Nav, NavItem, Navbar, NavDropdown, MenuItem, Glyphicon} from 'react-bootstrap';
+import PhotosGallery from '../../component/photosComp/PhotosGallery';
+import { Link } from 'react-router-dom';
 
 const leftSidebarRoutes = [
-  { path: '/', exact: true, name: 'NewsFeed', component: "Header" , imagePath : require("../../images/newsfeed.png") },
-  { path: '/', exact: true, name: 'Fav Pages Feed', component: "Header" , imagePath : require("../../images/star.png") },
-  { path: '/', exact: true, name: 'FriendGroups', component: "Header" , imagePath : require("../../images/conference.png") },
+  { path: '/', exact: true, name: 'Collapse Menu', component: "Header" , imagePath : require("../../images/crossIcon.png") },
+  { path: '/friendsList', exact: true, name: 'NewsFeed', component: "friendGalary" , imagePath : require("../../images/newsfeed.png") },
+  { path: '/videosList', exact: true, name: 'Fav Pages Feed', component: "Header" , imagePath : require("../../images/star.png") },
+  { path: '/photosList', exact: true, name: 'FriendGroups', component: "Header" , imagePath : require("../../images/conference.png") },
   { path: '/', exact: true, name: 'Music & Playlits', component: "Header" , imagePath : require("../../images/headphones.png") },
   { path: '/', exact: true, name: 'Weather App', component: "Header" , imagePath : require("../../images/storm.png") },
   { path: '/', exact: true, name: 'Calendar and Events', component: "Header" , imagePath : require("../../images/calendar.png") },
@@ -59,9 +62,12 @@ class SideBarRendering extends React.Component {
         }
         var listItems = this.props.listData.map(function(data, index){
             return (
-                <li className="nav-item leftmenu" key={data.name} onClick={this.handleClick.bind(null,index)} >
-                    <img src={data.imagePath} alt='' />
-                    {this.state.addClass &&
+                <li className="nav-item leftmenu" key={data.name} >
+                    <Link to={data.path}> 
+                        <img src={data.imagePath} alt='' />
+                    </Link>
+                    
+                    { this.state.addClass &&
                         <span className="nav-link active sideBarTitle" href="/">{data.name}</span>
                     }
                 </li>
@@ -78,4 +84,5 @@ class SideBarRendering extends React.Component {
     }
 };
 
+//onClick={this.handleClick.bind(null,index)} 
 export default LeftSideBarMenu;

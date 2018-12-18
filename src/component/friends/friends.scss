@@ -36,6 +36,9 @@
 }
 
 .more-dropdown{
+
+    padding-top: 10px;
+
     a {
         padding: 7px 0;
         font-size: 12px;
@@ -72,7 +75,7 @@
     width: 25%;
 }
 .friend-background{
-	  background-color: #f0f0f5;
+      background-color: #f0f0f5;
 }
 .friend-count-item {
     display: inline-block;
@@ -81,28 +84,30 @@
 .friend-count {
     margin-bottom: 35px;
     .h6{
-    	color: #515365;
+        color: #515365;
     }
     .title {
-	    color: #888da8;
-	}
+        color: #888da8;
+    }
 }
 
 .bg-blue{
-	background-color: #38a9ff;
+    background-color: #38a9ff;
     width: 50px;
     height: 50px;
     border-radius: 50px;
     margin-right: 20px;
     margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 .bg-purple{
-	background-color: #7c5ac2;
+    background-color: #7c5ac2;
     width: 50px;
     height: 50px;
     border-radius: 50px;
     margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 .friend-about {
@@ -127,7 +132,8 @@
     left:50px;
     top:25px;
 }
-.carousel  {
+
+.carousel-friend {
     position: relative;
     width: 200px;
     height: 180px !important;
@@ -150,6 +156,7 @@
         border-radius: 50%;
         cursor: pointer;
         border: 2px solid #d9dbe7;
+        top:100px;
     }
     
   }
@@ -160,9 +167,7 @@
 
   }
 
-
-
-.carousel-inner {
+.carousel-inner-friend {
     margin-bottom: 25px;
     font-size: 14px;
     .title{
@@ -215,5 +220,6 @@
     padding: 10px;
 }
 
-
-
+.more-height{
+    height: auto !important;
+}
