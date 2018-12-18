@@ -8,11 +8,12 @@ import FriendsGallery from '../../component/friends/FriendsGallery';
 import PhotosGallery from '../../component/photosComp/PhotosGallery';
 import VideosGallery from '../../component/videos/VideosGallery';
 
+import Timeline from '../../component/timelineComp/Timeline';
 
 import { Link } from 'react-router-dom';
 
 const leftSidebarRoutes = [
-  { path: '/', exact: true, name: 'Collapse Menu', component: "Header" , imagePath : require("../../images/crossIcon.png") },
+  { path: '/', exact: true, name: 'Collapse Menu', component: {Timeline} , imagePath : require("../../images/crossIcon.png") },
   { path: '/friendsList', exact: true, name: 'NewsFeed', component: {FriendsGallery} , imagePath : require("../../images/newsfeed.png") },
   { path: '/videosList', exact: true, name: 'Fav Pages Feed', component: {VideosGallery} , imagePath : require("../../images/star.png") },
   { path: '/photosList', exact: true, name: 'FriendGroups', component: {PhotosGallery} , imagePath : require("../../images/conference.png") },
