@@ -148,7 +148,7 @@ class Content extends React.Component {
 
     render(){
         return(
-            <div className="content">
+            <div className="container content">
                 {this.props.currentTab === 1 ?
                 <Timeline/>
                 :null}

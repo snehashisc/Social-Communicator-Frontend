@@ -70,42 +70,53 @@
 .carouselPhotoAlbum {
     position: relative;
     top: 8px;
-}
-.carousel-item {
-    img {            
-        width: 20%;
-        height: 20%;
+
+    .carousel-item {
+        img {            
+            width: 20%;
+            height: 20%;
+            position: relative;
+            left: -10px;
+        }
+    }
+
+    .carousel {
         position: relative;
-        left: -10px;
+        width: 100%;
+        height: 80px;
+    }
+    
+    ol.carousel-indicators {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        li{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            margin: auto 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #d9dbe7;
+        }
+    }
+
+    indicator-height{
+    top:0px!important
+    }
+
+    ol.carousel-indicators li.active {
+        background: wheat;
+    }
+
+    ol.carousel-indicators li.active {
+        background: red;
     }
 }
-
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 80px;
-  }
-  
-  ol.carousel-indicators {
-    position: absolute;
-    bottom: 0;
-    margin: 0;
-    left: 0;
-    right: 0;
-    width: auto;
-  }
-
-  indicator-height{
-   top:0px!important
-  }
-
-  ol.carousel-indicators li.active {
-    background: wheat;
-  }
-
-  ol.carousel-indicators li.active {
-    background: red;
-  }
 
   .ui-block {
     background-color: #fff;

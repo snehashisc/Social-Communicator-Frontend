@@ -7,7 +7,7 @@ class Timeline extends React.Component {
     render() {
         
         return (
-        	<div className="container">
+        	<div>
 				<div className="row timeline-component">
 					<div className="col col-xl-3 order-xl-1 col-lg-3 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12">
                     	<div className="ui-block">
