@@ -139,6 +139,7 @@
     height: 180px !important;
   }
   
+  .carousel-friend {
   ol.carousel-indicators  {
     position: absolute;
     bottom: 0;
@@ -156,10 +157,12 @@
         border-radius: 50%;
         cursor: pointer;
         border: 2px solid #d9dbe7;
-        top:120px;
+        top:30px;
+        bottom: 10px;
     }
     
   }
+}
 
   ol.carousel-indicators  li.active {
     background: wheat;
