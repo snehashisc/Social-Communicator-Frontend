@@ -1,29 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Navbar } from 'react-bootstrap';
+
 
 import './_leftSideBarMenu.scss';
 
-import { Navbar} from 'react-bootstrap';
-
-import FriendsGallery from '../../component/friends/FriendsGallery';
-import PhotosGallery from '../../component/photosComp/PhotosGallery';
-import VideosGallery from '../../component/videos/VideosGallery';
-
-import Timeline from '../../component/timelineComp/Timeline';
-
-import { Link } from 'react-router-dom';
-
 const leftSidebarRoutes = [
-  { path: '/', exact: true, name: 'Collapse Menu', component: {Timeline} , imagePath : require("../../images/crossIcon.png") },
-  { path: '/friendsList', exact: true, name: 'NewsFeed', component: {FriendsGallery} , imagePath : require("../../images/newsfeed.png") },
-  { path: '/videosList', exact: true, name: 'Fav Pages Feed', component: {VideosGallery} , imagePath : require("../../images/star.png") },
-  { path: '/photosList', exact: true, name: 'FriendGroups', component: {PhotosGallery} , imagePath : require("../../images/conference.png") },
-  { path: '/', exact: true, name: 'Music & Playlits', component: "Header" , imagePath : require("../../images/headphones.png") },
-  { path: '/', exact: true, name: 'Weather App', component: "Header" , imagePath : require("../../images/storm.png") },
-  { path: '/', exact: true, name: 'Calendar and Events', component: "Header" , imagePath : require("../../images/calendar.png") },
-  { path: '/', exact: true, name: 'Community Badges', component: "Header" , imagePath : require("../../images/calendar.png") },
-  { path: '/', exact: true, name: 'Friends Birthdays', component: "Header" , imagePath : require("../../images/birthday.png") },
-  { path: '/', exact: true, name: 'Account Stats', component: "Header" , imagePath : require("../../images/statistics.png") },
-  
+  { path: '/', exact: true, name: 'Collapse Menu', imagePath : require("../../images/crossIcon.png") },
+  { path: '/friendsList', exact: true, name: 'NewsFeed' , imagePath : require("../../images/newsfeed.png") },
+  { path: '/videosList', exact: true, name: 'Fav Pages Feed', imagePath : require("../../images/star.png") },
+  { path: '/photosList', exact: true, name: 'FriendGroups' , imagePath : require("../../images/conference.png") },
+  { path: '/', exact: true, name: 'Music & Playlits', imagePath : require("../../images/headphones.png") },
+  { path: '/', exact: true, name: 'Weather App', imagePath : require("../../images/storm.png") },
+  { path: '/', exact: true, name: 'Calendar and Events', imagePath : require("../../images/calendar.png") },
+  { path: '/', exact: true, name: 'Community Badges', imagePath : require("../../images/calendar.png") },
+  { path: '/', exact: true, name: 'Friends Birthdays', imagePath : require("../../images/birthday.png") },
+  { path: '/', exact: true, name: 'Account Stats', imagePath : require("../../images/statistics.png") },
 ];
 
 class LeftSideBarMenu extends React.Component {

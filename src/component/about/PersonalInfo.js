@@ -5,7 +5,7 @@ const PersonalInfo = (props) => {
 	
 
 	var personalDetails = Object.keys(props.info).map(function(val,key) {
-		return <li ><span className="title col-sm-4">{val}</span> <span className="text col-sm-8">{props.info[val]}</span></li>
+		return <li key={key}><span className="title col-sm-4">{val}</span> <span className="text col-sm-8">{props.info[val]}</span></li>
 	});
 
 	return (

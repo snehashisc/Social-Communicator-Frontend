@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch , Redirect} from 'react-router-dom';
 import './App.scss';
+
+
 import Profile from './component/profileComp/ProfileComp';
 import Header  from './common/header/Header.js';
 import LeftSideBarMenu  from './common/leftSideBarMenu/LeftSideBarMenu.js';
@@ -13,17 +15,20 @@ import VideosGallery from './component/videos/VideosGallery';
 
 const AppRouter = () => (
   <Fragment>
-    <Header />
-    <LeftSideBarMenu />
-    <ChatMenuBar />
-    <HashRouter>
+      <Header />
+      <LeftSideBarMenu />
+      <ChatMenuBar />
         <Switch>
+          <Route exact path="/" render={() => (
+              <Redirect to="/profile"/>
+          )}/>
+   
           <Route path="/" exact name="Home" component={Profile} />
-          <Route path="/friendsList" exact name="FriendsGallery" component={FriendsGallery} />
-          <Route path="/photosList" exact name="PhotosGallery" component={PhotosGallery} />
-          <Route path="/videosList" exact name="VideosGallery" component={VideosGallery} />
+          <Route path="/profile"  name="Home1" component={Profile} />
+          <Route path="/friendsList" name="FriendsGallery" component={FriendsGallery} />
+          <Route path="/photosList" name="PhotosGallery" component={PhotosGallery} />
+          <Route path="/videosList" name="VideosGallery" component={VideosGallery} />
         </Switch>
-		  </HashRouter> 
   </Fragment>
 );
 
