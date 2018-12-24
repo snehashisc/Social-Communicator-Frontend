@@ -4,9 +4,6 @@ import ProfileRoutes from './ProfileRoutes.js';
 import { Link } from 'react-router-dom';
 
 import './ProfileComp.scss';
-
-
-
 import Timeline from '../timelineComp/Timeline';
 import AboutPage from '../about/AboutPage';
 import FriendsGallery from '../friends/FriendsGallery';

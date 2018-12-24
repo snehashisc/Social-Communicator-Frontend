@@ -4,7 +4,7 @@ import PhotoContent from './PhotoContent';
 
 import {Carousel} from 'react-bootstrap';
 const PhotoModal = (props) => {
-    console.log (props.modalId);
+    //console.log (props.modalId);
     return (
              <div className="container">
                  <div className="modal" id= {props.modalId}>

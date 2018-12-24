@@ -1,10 +1,11 @@
-import React from 'react';
-//import aboutapis from '../../api/aboutapis';
+import React,{Fragment} from 'react';
+import aboutapis from '../../api/aboutapis';
 import PersonalInfo from './PersonalInfo';
 import EducationAndEmployement from './EducationAndEmployement';
 import HobbiesAndInterests from './HobbiesAndInterests';
 //import * as aboutActions from '../../actions/aboutActions';
 import { connect } from 'react-redux';
+import Weather from './../../common/widget/weather/Weather';
 import './about.scss';
 
 class AboutPage extends React.Component{
@@ -18,6 +19,7 @@ class AboutPage extends React.Component{
 		const about = this.props.about;
 		console.log("Props",about.personalInfo);
 		return (
+			<Fragment>
 			<div className="container">
 				<div className="row">
 					<div className="col col-xl-4 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12 about-background">
@@ -29,7 +31,17 @@ class AboutPage extends React.Component{
 					</div>
 					
 				</div>
+				
+				
 			</div>
+			<div className="container">
+				<div className="row">
+				<div className="col col-xl-4 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12">
+					    <Weather />
+					</div>
+					</div>
+					</div>
+			</Fragment>
 		);
 	}
 }	

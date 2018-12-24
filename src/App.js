@@ -10,6 +10,7 @@ import FriendsGallery from './component/friends/FriendsGallery';
 import PhotosGallery from './component/photosComp/PhotosGallery';
 import VideosGallery from './component/videos/VideosGallery';
 
+import NewsFeed from './component/newsfeed/Newsfeed.js';
 
 const AppRouter = () => (
   <Fragment>
@@ -19,7 +20,7 @@ const AppRouter = () => (
     <HashRouter>
         <Switch>
           <Route path="/" exact name="Home" component={Profile} />
-          <Route path="/friendsList" exact name="FriendsGallery" component={FriendsGallery} />
+          <Route path="/newsfeed" exact name="FriendsGallery" component={NewsFeed} />
           <Route path="/photosList" exact name="PhotosGallery" component={PhotosGallery} />
           <Route path="/videosList" exact name="VideosGallery" component={VideosGallery} />
         </Switch>
