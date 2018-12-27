@@ -2,6 +2,11 @@
 .col-4-width {
     width: 25%;
 }
+
+.col-3-width {
+    width:33.3%;
+}
+
 .photo-album-wrapper {
     margin-right: -12px;
 }
@@ -171,19 +176,6 @@
     }    
 }
 
-
-// .test-hover1,
-// .test-hover2 {
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-// }
-// .test-hover2 {
-//   z-index: 10;
-// }
-
 .photo-gallery {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -273,3 +265,88 @@
 // .video-react .video-react-big-play-button.video-react-big-play-button-center{
 //     left: 60% !important;
 // }
+
+.photo-upload-album-row {
+
+    .form-group {
+        position: relative;
+        margin-bottom: 30px;
+        top: -28px;
+        .control-label {
+            position: absolute;
+            top: 45px;
+            z-index: 2;
+            left: 8px;
+        }
+        .form-control {
+            position: relative;
+            top: 43px;
+            height: 41px;
+            padding-top: 11px;
+        }
+    }
+    
+    .create-album-container {
+        height: 340px;
+    }
+
+    .photo-album-upload-item-wrap {
+        display: inline-block;
+        margin-right: -3px;
+        padding: 0 7px;
+        vertical-align: top;
+        border-width: 2px;
+        border-color: grey;
+        border-radius:10px;
+        margin:0px 0px 10px 0px;
+        padding-bottom: 30px;
+    }
+
+    .photo-album-upload-footer {
+        textarea {
+            border-radius: 0;
+            border-right: 0;
+            border-left: 0;
+            font-size: 12px;
+            resize: none;
+            height: 100px;
+        }
+        margin-top: -40px;
+    }
+
+}
+
+.upload-photos-container {
+    .modal-body {
+        overflow-y: auto;
+    }
+}
+
+.photo-album-upload-footer {
+    .select-upload-btn {
+        position: relative;
+        top: 43px;
+        border: none;
+        width: -webkit-fill-available;
+        background-color: gray;
+    }
+}
+
+.upload-photo-item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 49%;
+    padding: 50px;
+    text-align: center;
+    fill: #c2c5d9;
+    border-left: 1px solid #e6ecf5;
+    .glyphicon {
+        font-size: large;
+    }
+}
+
+.update-header-photo-modal {
+    .modal-content {
+        height: 250px;
+    }
+}

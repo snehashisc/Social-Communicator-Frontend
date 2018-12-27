@@ -1,4 +1,6 @@
 import React from 'react';
+import CreateAlbumModal from './CreateAlbumModal';
+import UpdateHeaderPhoto from './UpdateHeaderPhoto';
 
 //import './_photo.scss';
 
@@ -36,6 +38,8 @@ const PhotoGalleryHeader = (props) => {
                     </div>
                 </div>
             </div>
+            <CreateAlbumModal/>
+            <UpdateHeaderPhoto/>
         </div>
     );
 };

@@ -8,7 +8,8 @@ const photoAlbums = {
             "socialStatus": {
                 "photos": 23,
                 "comments": 4,
-                "shares": 0
+                "shares": 0,
+                "likes": 214
             }
         },
         {
@@ -19,7 +20,8 @@ const photoAlbums = {
             "socialStatus": {
                 "photos": 34,
                 "comments": 14,
-                "shares": 2
+                "shares": 2,
+                "likes": 24
             }
         },
         {
@@ -30,7 +32,8 @@ const photoAlbums = {
             "socialStatus": {
                 "photos": 17,
                 "comments": 34,
-                "shares": 3
+                "shares": 3,
+                "likes": 103
             }
         },
         {
@@ -41,7 +44,8 @@ const photoAlbums = {
             "socialStatus": {
                 "photos": 17,
                 "comments": 34,
-                "shares": 3
+                "shares": 3,
+                "likes": 21
             }
         },
         {
@@ -52,7 +56,8 @@ const photoAlbums = {
             "socialStatus": {
                 "photos": 17,
                 "comments": 34,
-                "shares": 3
+                "shares": 3,
+                "likes": 245
             }
         },
         {
@@ -63,7 +68,8 @@ const photoAlbums = {
             "socialStatus": {
                 "photos": 17,
                 "comments": 34,
-                "shares": 3
+                "shares": 3,
+                "likes": 25
             }
         },
         {
@@ -74,7 +80,8 @@ const photoAlbums = {
             "socialStatus": {
                 "photos": 17,
                 "comments": 34,
-                "shares": 3
+                "shares": 3,
+                "likes": 214
             }
         }
     ]

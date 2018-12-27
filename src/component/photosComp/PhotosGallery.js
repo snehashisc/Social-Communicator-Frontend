@@ -2,6 +2,7 @@ import React from  'react';
 import { connect } from 'react-redux';
 import Photo from './Photo';
 import PhotoGalleryHeader from './PhotoGalleryHeader';
+import CreateAlbumModal from './CreateAlbumModal';
 //import './_photo.scss';
 
 class PhotosGallery extends React.Component {
@@ -16,7 +17,7 @@ class PhotosGallery extends React.Component {
                         <div className= "col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 photo-album-row">
                             <div className="tab-content">
                                 <div className=" col-4-width photo-album-item-wrap create-album-container">
-                                    <a href="#/"><img src={require("../../images/plus-icon.jpeg")} className="create-album" alt="Create Album"/></a>
+                                    <a href="#/" data-toggle="modal" data-target="#create-photo-album"><img src={require("../../images/plus-icon.jpeg")} className="create-album" alt="Create Album"/></a>
                                     <div className= 'imgFooter'> 
                                         <h4>Create an Album</h4>
                                         <h5>It only take few minutes!</h5>
@@ -31,6 +32,7 @@ class PhotosGallery extends React.Component {
                         </div>        
                     </div>  
                 </div> 
+                <CreateAlbumModal/>
              </div>
         );
     }

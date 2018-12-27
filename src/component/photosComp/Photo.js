@@ -12,7 +12,7 @@ const Photo = (props) => {
                     <img className = "test-hover1" src={props.path} alt="Italian Trulli" />
                     <div className="image-content">
                         <span className="glyphicon glyphicon-heart"></span>
-                        <span className="image-content-number">312</span>
+                        <span className="image-content-number">{props.socialStatus.likes}</span>
                     </div>
                 </a>
                 {/* <img className = "test-hover2" src={props.path} alt="Italian Trulli" ></img> */}
