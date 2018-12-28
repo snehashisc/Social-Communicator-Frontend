@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import UploadPhotos from './UploadPhotos';
+import PhotoContent from './PhotoContent';
 
+import {Carousel} from 'react-bootstrap';
 class CreateAlbumModal extends React.Component {
     render () {
         const albums = this.props.albums;
         return (
-                <div className="container upload-photos-container">
+                <div className="container">
                     <div className="modal" id= "create-photo-album">
                         <div className="modal-dialog modal-lg">
                             <div className="modal-content">        
@@ -21,7 +23,7 @@ class CreateAlbumModal extends React.Component {
                                         <form className="form-group label-floating">
                                             <label className="control-label">Album Name</label>
                                             <input className="form-control" placeholder="" type="text" value="Rock Garden Festival - Day 4"/>
-                                            <span className="material-input"></span>
+                                            <span class="material-input"></span>
                                         </form>
                                         <div className="tab-content">
                                             <div className=" col-3-width photo-album-item-wrap create-album-container">
@@ -31,7 +33,7 @@ class CreateAlbumModal extends React.Component {
                                                 </div> 
                                             </div>
                                             {
-                                                albums.images.map((image, index) => {
+                                                albums.albums.map((image, index) => {
                                                    return <UploadPhotos className='imageClass' key={image.imageTitle + index} path= {image.path}/>
                                                 })
                                             }

@@ -12,12 +12,12 @@ const Photo = (props) => {
                     <img className = "test-hover1" src={props.path} alt="Italian Trulli" />
                     <div className="image-content">
                         <span className="glyphicon glyphicon-heart"></span>
-                        <span className="image-content-number">{props.socialStatus.likes}</span>
+                        <span onClick ={props.increaseAlbumLikes.bind(this, props.idImage)} className="image-content-number">{props.socialStatus.likes}</span>
                     </div>
                 </a>
                 {/* <img className = "test-hover2" src={props.path} alt="Italian Trulli" ></img> */}
                 {/* <a href="#" data-toggle="modal" data-target={"#myModal"+props.idImage} className= "full-block"></a> */}
-                <PhotoModal modalId={"myModal"+props.idImage}/>
+                <PhotoModal modalId={"myModal"+props.idImage} albumItems= {props.albumItems}/>
             </div>
             <div className= 'imgFooter'> 
                 <h5>{props.title}</h5>

@@ -8,9 +8,10 @@ import AuthorPost from '../../common/socialPostSection/AuthorPost';
 class PhotoContent extends React.Component {
     
     render() {
+        console.log (this.props.albumItems);
     return (
             <div className="open-photo-content">
-                <AuthorPost/>
+                <AuthorPost albumItems= {this.props.albumItems}/>
                 <LikesAndShares/>                
                 <FriendsComments/>  
                 <EnterComment/> 

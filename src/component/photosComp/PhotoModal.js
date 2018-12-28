@@ -4,7 +4,7 @@ import PhotoContent from './PhotoContent';
 
 import {Carousel} from 'react-bootstrap';
 const PhotoModal = (props) => {
-    console.log (props.modalId);
+    console.log (props.albumItems);
     return (
              <div className="container">
                  <div className="modal" id= {props.modalId}>
@@ -33,7 +33,7 @@ const PhotoModal = (props) => {
                                     </Carousel> 
                                 </div>
                                 <div className="open-photo-text-container">
-                                    <PhotoContent/>
+                                    <PhotoContent albumItems = {props.albumItems}/>
                                 </div>
                             </div>
                             

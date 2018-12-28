@@ -1,7 +1,7 @@
 const photoAlbums = {
-    images :[
+    albums :[
         {
-            "id": 1,
+            "id": 0,
             "imageTitle": "South America vacation",
             "addedTime": "Two hours ago",
             "path": require("../images/photo-item2.jpg"),
@@ -10,10 +10,18 @@ const photoAlbums = {
                 "comments": 4,
                 "shares": 0,
                 "likes": 214
-            }
+            },
+            "albumItems": [
+                {
+                    "item1": {
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    }
+                }
+            ]
         },
         {
-            "id": 2,
+            "id": 1,
             "imageTitle": "Photoshoot Summer 2016",
             "addedTime": "Three hours ago",
             "path": require("../images/photo-album1.jpg"),
@@ -22,10 +30,18 @@ const photoAlbums = {
                 "comments": 14,
                 "shares": 2,
                 "likes": 24
-            }
+            },
+            "albumItems": [
+                {
+                    "item1": {
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from today’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    }
+                }
+            ]
         },
         {
-            "id": 3,
+            "id": 2,
             "imageTitle": "Amazing street food",
             "addedTime": "Four hours ago",
             "path": require("../images/photo-album2.jpg"),
@@ -34,10 +50,18 @@ const photoAlbums = {
                 "comments": 34,
                 "shares": 3,
                 "likes": 103
-            }
+            },
+            "albumItems": [
+                {
+                    "item1": {
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from yesterday photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    }
+                }
+            ]
         },
         {
-            "id": 4,
+            "id": 3,
             "imageTitle": "Amazing street food",
             "addedTime": "Four hours ago",
             "path": require("../images/photo-album3.jpg"),
@@ -46,10 +70,18 @@ const photoAlbums = {
                 "comments": 34,
                 "shares": 3,
                 "likes": 21
-            }
+            },
+            "albumItems": [
+                {
+                    "item1": {
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    }
+                }
+            ]
         },
         {
-            "id": 5,
+            "id": 4,
             "imageTitle": "Amazing street food",
             "addedTime": "Four hours ago",
             "path": require("../images/photo-album4.jpg"),
@@ -58,10 +90,18 @@ const photoAlbums = {
                 "comments": 34,
                 "shares": 3,
                 "likes": 245
-            }
+            },
+            "albumItems": [
+                {
+                    "item1": {
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    }
+                }
+            ]
         },
         {
-            "id": 6,
+            "id": 5,
             "imageTitle": "Amazing street food",
             "addedTime": "Four hours ago",
             "path": require("../images/photo-item6.jpg"),
@@ -70,7 +110,15 @@ const photoAlbums = {
                 "comments": 34,
                 "shares": 3,
                 "likes": 25
-            }
+            },
+            "albumItems": [
+                {
+                    "item1": {
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    }
+                }
+            ]
         },
         {
             "id": 6,
@@ -82,7 +130,15 @@ const photoAlbums = {
                 "comments": 34,
                 "shares": 3,
                 "likes": 214
-            }
+            },
+            "albumItems": [
+                {
+                    "item1": {
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    }
+                }
+            ]
         }
     ]
 };

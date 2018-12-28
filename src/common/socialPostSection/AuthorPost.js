@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AuthorPost = (props) => {
-    //console.log (props.path);
+    //console.log ("album itenms",props.albumItems);
     return (
         <article className="hentry post">
 
@@ -50,7 +50,7 @@ const AuthorPost = (props) => {
                         </div>
                     </div>
 
-                    <p>Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog.</p>
+                    <p>{props.albumItems}</p>
 
                     <p>With: <a href="#/">Jessy Owen</a>, <a href="#/">Marina Valentine</a></p>               
                 </article>

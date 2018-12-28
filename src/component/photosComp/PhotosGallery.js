@@ -8,7 +8,8 @@ import CreateAlbumModal from './CreateAlbumModal';
 class PhotosGallery extends React.Component {
 
     render() {
-        const albums = this.props.albums;
+        const photoAlbums = this.props.albums;
+        console.log("photo albums", photoAlbums);
         return (
             <div>
                 <PhotoGalleryHeader/>
@@ -24,8 +25,8 @@ class PhotosGallery extends React.Component {
                                     </div> 
                                 </div>
                                 {
-                                    albums.images.map((image, index) => {
-                                        return <Photo className='imageClass' key={image.imageTitle + index} path= {image.path} title={image.imageTitle} addTime = {image.addedTime} idImage={image.id} socialStatus={image.socialStatus}/>
+                                    photoAlbums.albums.map((image, index) => {
+                                        return <Photo className='imageClass' key={image.imageTitle + index} path= {image.path} title={image.imageTitle} addTime = {image.addedTime} idImage={image.id} socialStatus={image.socialStatus} increaseAlbumLikes = {this.props.increaseAlbumLike} albumItems = {image.albumItems[0].item1.description}/>
                                     })
                                 }
                             </div>
@@ -44,4 +45,11 @@ const mapStateToProps = state => {
     }
 };
 
-export default connect(mapStateToProps) (PhotosGallery);
+const mapDispatchToProps = dispatch => {
+    return {
+        increaseAlbumLike: (id) => dispatch ({type: "INCREASE_ALBUM_LIKES", value: 1,id: id}),
+        decreaseAlbumLike: () => dispatch ({type: "DECREASE_ALBUM_LIKES", value: 1})
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (PhotosGallery);
