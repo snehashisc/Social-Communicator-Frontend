@@ -4,7 +4,7 @@ import PhotoContent from './PhotoContent';
 
 import {Carousel} from 'react-bootstrap';
 const PhotoModal = (props) => {
-    console.log (props.albumItems);
+    console.log (props.picItems);
     return (
              <div className="container">
                  <div className="modal" id= {props.modalId}>
@@ -17,6 +17,18 @@ const PhotoModal = (props) => {
     
                             <div className="modal-body">
                                 <div className="open-photo-thumb">
+                                    <Carousel indicators={false} interval={null}>  
+                                     {
+                                        props.picItems.map((image, index) => {
+                                            return  <Carousel.Item>
+                                                        <img className="carousal-images"  alt="900x500" src= {image.imgPath} />
+                                                    </Carousel.Item>
+                                                
+                                    })
+                                }
+                                </Carousel> 
+                             </div>
+                                {/* <div className="open-photo-thumb">
                                     <Carousel indicators={false} interval={null}>
                                         <Carousel.Item>
                                             <img className="carousal-images"  alt="900x500" src={require("../../images/photo-album1.jpg")} />
@@ -31,7 +43,7 @@ const PhotoModal = (props) => {
                                             <img className="carousal-images"  alt="900x500" src={require("../../images/open-photo2.jpg")} />
                                         </Carousel.Item>
                                     </Carousel> 
-                                </div>
+                                </div> */}
                                 <div className="open-photo-text-container">
                                     <PhotoContent albumItems = {props.albumItems}/>
                                 </div>

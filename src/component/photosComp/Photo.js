@@ -17,7 +17,7 @@ const Photo = (props) => {
                 </a>
                 {/* <img className = "test-hover2" src={props.path} alt="Italian Trulli" ></img> */}
                 {/* <a href="#" data-toggle="modal" data-target={"#myModal"+props.idImage} className= "full-block"></a> */}
-                <PhotoModal modalId={"myModal"+props.idImage} albumItems= {props.albumItems}/>
+                <PhotoModal modalId={"myModal"+props.idImage} albumItems= {props.albumItems} picItems = {props.picItems}/>
             </div>
             <div className= 'imgFooter'> 
                 <h5>{props.title}</h5>

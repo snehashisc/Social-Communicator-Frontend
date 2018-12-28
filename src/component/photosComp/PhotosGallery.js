@@ -26,7 +26,8 @@ class PhotosGallery extends React.Component {
                                 </div>
                                 {
                                     photoAlbums.albums.map((image, index) => {
-                                        return <Photo className='imageClass' key={image.imageTitle + index} path= {image.path} title={image.imageTitle} addTime = {image.addedTime} idImage={image.id} socialStatus={image.socialStatus} increaseAlbumLikes = {this.props.increaseAlbumLike} albumItems = {image.albumItems[0].description}/>
+                                        console.log ("inside gallery", image.albumItems);
+                                        return <Photo className='imageClass' key={image.imageTitle + index} path= {image.path} title={image.imageTitle} addTime = {image.addedTime} idImage={image.id} socialStatus={image.socialStatus} increaseAlbumLikes = {this.props.increaseAlbumLike} albumItems = {image.albumItems[0].description} picItems = {image.albumItems}/>
                                     })
                                 }
                             </div>

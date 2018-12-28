@@ -13,8 +13,14 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                    
+                    "picId": 1,
                     "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    
+                },
+                {
+                    "picId": 2,
+                    "imgPath": require("../images/photo-album1.jpg"),
                     "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
                     
                 }
@@ -33,9 +39,15 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                   
-                    "imgPath": require("../images/photo-item2.jpg"),
+                    "picId": 1,
+                    "imgPath": require("../images/photo-album1.jpg"),
                     "description": "Here’s a photo from today’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    
+                },
+                {
+                    "picId": 2,
+                    "imgPath": require("../images/photo-album2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
                     
                 }
             ]
@@ -53,9 +65,15 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                    
+                    "picId": 1,
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from yesterday photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    
+                },
+                {
+                    "picId": 2,
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
                     
                 }
             ]
@@ -73,7 +91,13 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
+                    "picId": 1,
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
                     
+                },
+                {
+                    "picId": 2,
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
                     
@@ -93,7 +117,13 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
+                    "picId": 1, 
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
                     
+                },
+                {
+                    "picId": 2,
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
                     
@@ -113,7 +143,13 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
+                    "picId": 1,
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
                     
+                },
+                {
+                    "picId": 2,
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
                     
@@ -133,7 +169,13 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                   
+                    "picId": 1,
+                    "imgPath": require("../images/photo-item2.jpg"),
+                    "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
+                    
+                },
+                {
+                    "picId": 2,
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
                     
