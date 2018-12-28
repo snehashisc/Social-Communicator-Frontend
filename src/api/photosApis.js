@@ -13,10 +13,10 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                    "item1": {
+                    
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
-                    }
+                    
                 }
             ]
         },
@@ -33,10 +33,10 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                    "item1": {
+                   
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from today’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
-                    }
+                    
                 }
             ]
         },
@@ -53,10 +53,10 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                    "item1": {
+                    
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from yesterday photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
-                    }
+                    
                 }
             ]
         },
@@ -73,10 +73,10 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                    "item1": {
+                    
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
-                    }
+                    
                 }
             ]
         },
@@ -93,10 +93,10 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                    "item1": {
+                    
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
-                    }
+                    
                 }
             ]
         },
@@ -113,10 +113,10 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                    "item1": {
+                    
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
-                    }
+                    
                 }
             ]
         },
@@ -133,10 +133,10 @@ const photoAlbums = {
             },
             "albumItems": [
                 {
-                    "item1": {
+                   
                     "imgPath": require("../images/photo-item2.jpg"),
                     "description": "Here’s a photo from last month’s photoshoot. We really had a great time and got a batch of incredible shots for the new catalog."
-                    }
+                    
                 }
             ]
         }
