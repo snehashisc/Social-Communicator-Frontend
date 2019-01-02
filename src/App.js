@@ -16,21 +16,27 @@ import VideosGallery from './component/videos/VideosGallery';
 
 const AppRouter = () => (
   <Fragment>
-    <Header />
-    <LeftSideBarMenu />
-    <ChatMenuBar />
+    
     <HashRouter>
         <Switch>
+          
           <Route path="/" exact name="Login" component={Login} />
-          <Route path="/login" exact name="Login" component={Login} />
-          <PrivateRoute path="/home" exact name="Home" component={Profile} />
-          <PrivateRoute path="/friendsList" exact name="FriendsGallery" component={FriendsGallery} />
-          <PrivateRoute path="/photosList" exact name="PhotosGallery" component={PhotosGallery} />
-          <PrivateRoute path="/videosList" exact name="VideosGallery" component={VideosGallery} />
+          <PrivateRoute path="/home"  component={Profile} />
+          <PrivateRoute path="/friendsList"  component={FriendsGallery} />
+          <PrivateRoute path="/photosList"  component={PhotosGallery} />
+          <PrivateRoute path="/videosList" component={VideosGallery} />
         </Switch>
 		  </HashRouter> 
   </Fragment>
 );
+
+/*
+  <Header />
+  <LeftSideBarMenu />
+  <ChatMenuBar />
+    <Route path="/login" exact name="Login" component={Login} />
+    <Route path="/" exact name="Login" component={Login} />
+*/
 
 
 export default AppRouter;

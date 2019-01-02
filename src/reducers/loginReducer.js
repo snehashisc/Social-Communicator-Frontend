@@ -12,7 +12,7 @@ const loginReducer = (state = {"isAuthenticated" : false}, action) => {
             }
             newState.submitted = true;
             console.log("In reducer login", newState);		
-                return newState;
+            return newState;
         default:
             return state;
         }

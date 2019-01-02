@@ -1,6 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link , Redirect} from 'react-router-dom';
 import { connect } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Route,
+  withRouter
+} from 'react-router-dom';
+
+import { Field, reduxForm } from 'redux-form';
+
 
 class Login extends React.Component {
     constructor(props) {
@@ -12,21 +20,35 @@ class Login extends React.Component {
         };
 
         this.handleChange = this.handleChange.bind(this);
+        
     }
 
     handleChange(e) {
         const { name, value } = e.target;
         this.setState({ [name]: value });
-    }
-
+    };
 
     render() {
+        const { from } = this.props.location.state || { from: { pathname: '/home' } }
+        
+        console.log(this.props.login.isAuthenticated,'>>>>>>>>>')
+
+        if (this.props.login.isAuthenticated === true) {
+          return <Redirect to={from} />
+        }
+
         const { username, password} = this.state;
+
+        const { handleSubmit, pristine, reset, submitting } = this.props
+
+
+
         return (
             <div className="col-md-6 col-md-offset-3 login-form">
                 <h2>Login</h2>
-                <form name="form" onSubmit={this.props.handleSubmit.bind (this, this.state)}>
-                    <div className={'form-group' + (this.props.login.submitted && !username ? ' has-error' : '')}>
+                
+                
+                      <div className={'form-group' + (this.props.login.submitted && !username ? ' has-error' : '')}>
                         <label htmlFor="username">Username</label>
                         <input type="text" className="form-control" name="username" value={username} onChange={this.handleChange} />
                         {this.props.login.submitted && !username &&
@@ -40,12 +62,14 @@ class Login extends React.Component {
                             <div className="help-block">Password is required</div>
                         }
                     </div>
-                    <div className="form-group">
-                        <button className="btn btn-primary">Login</button>
-                        <Link to="/register" className="btn btn-link">Register</Link>
-                    </div>
-                </form>
+                      <div className="form-group">
+                            <button className="btn btn-primary" onClick={this.props.handleSubmit.bind (this, this.state)}>Login</button>
+                            <Link to="/register" className="btn btn-link">Register</Link>
+                        </div>
+                        
             </div>
+
+
         );
     }
 }
@@ -56,6 +80,7 @@ function mapStateToProps(state) {
     }
 }
 
+//<form onSubmit={this.props.handleSubmit.bind (this, this.state)}>
 const mapDispatchToProps = dispatch => {
     return {
         handleSubmit: (cred) => dispatch ({type: "LOGIN", cred: cred})
@@ -63,4 +88,14 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+Login = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Login);
+
+
+export default reduxForm({
+    form: 'login' // a unique name for this form
+})(Login);
+
+//export default connect(mapStateToProps, mapDispatchToProps)(Login);
