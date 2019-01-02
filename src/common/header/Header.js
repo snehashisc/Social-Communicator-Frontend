@@ -19,9 +19,20 @@ import {
 //import ProfileHoverPanel from '../popups/profileSettings/ProfileHoverPanel.js'
 
 import NavBarPopup from '../popups/navBarPopOverItem/NavBarPopup.js'
+import LeftSideBarMenu  from '../leftSideBarMenu/LeftSideBarMenu.js';
+import ChatViewComponent  from '../popups/chatView/ChatViewComponent.js';
+
 //lg , md , sm ,xs
 
 import './_header.scss';
+
+                        // <div className="logoContainer">
+                        //     <Image  src = "../images/logo.png" 
+                        //         bsStyle = "default" 
+                        //         className = "mainLogo clear" 
+                        //     />
+                        //     <p className="logo-text">Olympus</p>
+                        // </div>
 
 class Header extends React.Component {
     constructor(){
@@ -31,15 +42,10 @@ class Header extends React.Component {
             messagePopup: false,
             notificationPopup:false,
             searchFieldPopUp:false,
-            profileSettings:false
+            profileSettings:false,
+            loadChatContainer: false,
         };
-        //this.handleFriendPopupClickEvent = this.handleFriendPopupClickEvent.bind(this);
     };
-
-    
-    // handleFriendPopupClickEvent(e){
-        
-    // }
 
     handleFriendPopupClickEvent = (param) => {
         // param is the argument you passed to the function
@@ -51,7 +57,8 @@ class Header extends React.Component {
                 friendPopup: !this.state.friendPopup ,
                 searchFieldPopUp: false,
                 messagePopup : false,
-                profileSettings: false
+                profileSettings: false,
+                loadChatContainer: false
             });
         }
         if(param === "loadSearchContainer"){
@@ -59,7 +66,8 @@ class Header extends React.Component {
                 searchFieldPopUp: !this.state.searchFieldPopUp ,
                 friendPopup : false,
                 messagePopup : false,
-                profileSettings: false
+                profileSettings: false,
+                loadChatContainer: false
             });
         }
         if(param === "loadMessageContainer"){
@@ -67,13 +75,25 @@ class Header extends React.Component {
                 messagePopup: !this.state.messagePopup ,
                 friendPopup : false,
                 searchFieldPopUp: false,
-                profileSettings: false
+                profileSettings: false,
+                loadChatContainer: false
             });
         }
 
         if(param === "loadProfileContainer"){
             this.setState({
                 profileSettings: !this.state.profileSettings ,
+                messagePopup: false ,
+                friendPopup : false,
+                searchFieldPopUp: false,
+                loadChatContainer: false
+            });
+        }
+
+        if(param === "loadChatContainer"){
+            this.setState({
+                loadChatContainer: !this.state.loadChatContainer ,
+                profileSettings: false ,
                 messagePopup: false ,
                 friendPopup : false,
                 searchFieldPopUp: false
@@ -92,83 +112,83 @@ class Header extends React.Component {
         // console.log(boxClass)
         return (
             <Fragment>
-			    <Row className="show-grid">
-			      	
+			    <Row className="show-grid headerContainer">
+			      	<LeftSideBarMenu />
                     <div className="wholeContainer">
-                        <Image  src = "../images/logo.png" 
-                            bsStyle = "default" 
-                            className = "mainLogo clear" 
-                        />
+                        
+                        <div className="topNavContainer">
+                            <div className="searchContainer">
+                                <Navbar.Header className = "navBarTitleAlignment">
+                                    <Navbar.Brand >
+                                        <span className = "navBarTitle">
+                                            PROFILE PAGE
+                                        </span>
+                                    </Navbar.Brand>
+                                    <Navbar.Toggle />
+                                </Navbar.Header>
+                                <Navbar.Form
+                                    pullLeft
+                                    className = "navSearchFiledAlignment">
+                                    <FormGroup >
+                                        <InputGroup >
+                                            <FormControl
+                                              type = "text"
+                                              className = "inputFieldCss"
+                                              placeholder = "Search Here People or Pages..."/>
+                                            <InputGroup.Addon className="searchIconView">
+                                              <Glyphicon glyph="search" className="searchIcon"/>
+                                            </InputGroup.Addon>
+                                        </InputGroup>
+                                        <a href = "#brand" 
+                                              className = "findFriendTextAlignment">
+                                            FIND FRIENDS
+                                        </a>
+                                    </FormGroup>
+                                </Navbar.Form>
+                                
+                            </div>
+                            <div className="notificationContainer iconDetails">
 
-                        <div className="searchContainer">
-                            <Navbar.Header className = "navBarTitleAlignment">
-                                <Navbar.Brand >
-                                    <span className = "navBarTitle">
-                                        PROFILE PAGE
-                                    </span>
-                                </Navbar.Brand>
-                                <Navbar.Toggle />
-                            </Navbar.Header>
-                            <Navbar.Form
-                                pullLeft
-                                className = "navSearchFiledAlignment">
-                                <FormGroup >
-                                    <InputGroup >
-                                        <FormControl
-                                          type = "text"
-                                          className = "inputFieldCss"
-                                          placeholder = "Search Here People or Pages..."/>
-                                        <InputGroup.Addon className="searchIconView">
-                                          <Glyphicon glyph="search" className="searchIcon"/>
-                                        </InputGroup.Addon>
-                                    </InputGroup>
-                                    
-                                </FormGroup>
-                            </Navbar.Form>
-                            <a href = "#brand" 
-                                  className = "findFriendTextAlignment">
-                                FIND FRIENDS
-                            </a>
-                        </div>
-                        <div className="notificationContainer iconDetails">
+                                <span className={["iconContainer",this.state.friendPopup,"si1"].join(' ')} onClick={()=>this.handleFriendPopupClickEvent("loadFriendContainer")} >
+                                    <img src={require('../../images/friendsIcon.png')} alt='' className="socialIcon"/> 
+                                    <Badge className="badgeAlignment">15</Badge>
+                                </span>
+                                  
+                                <span className={["iconContainer",this.state.messagePopup,"si2"].join(' ')} onClick={()=>this.handleFriendPopupClickEvent("loadMessageContainer")}>
+                                    <img src={require('../../images/messageIcon.ico')} alt='' className="socialIcon"/>
+                                    <Badge className="badgeAlignment">45</Badge>
+                                </span>
 
-                            <span className={["iconContainer",this.state.friendPopup,"si1"].join(' ')} onClick={()=>this.handleFriendPopupClickEvent("loadFriendContainer")} >
-                                <img src={require('../../images/friendsIcon.png')} alt='' className="socialIcon"/> 
-                                <Badge className="badgeAlignment">15</Badge>
-                            </span>
-                              
-                            <span className={["iconContainer",this.state.messagePopup,"si2"].join(' ')} onClick={()=>this.handleFriendPopupClickEvent("loadMessageContainer")}>
-                                <img src={require('../../images/messageIcon.ico')} alt='' className="socialIcon"/>
-                                <Badge className="badgeAlignment">45</Badge>
-                            </span>
+                                <span className="iconContainer">
+                                    <img src={require('../../images/notificationIcon.png')} alt='' className="socialIcon"/>
+                                    <Badge className="badgeAlignment">4</Badge>
+                                </span>
 
-                            <span className="iconContainer">
-                                <img src={require('../../images/notificationIcon.png')} alt='' className="socialIcon"/>
-                                <Badge className="badgeAlignment">4</Badge>
-                            </span>
+                                <Glyphicon glyph="search" className="iconContainer searchIcon1" onClick={()=>this.handleFriendPopupClickEvent("loadSearchContainer")}/>
+                                
+                                <span className="iconContainer profileIconDetails" onClick={()=>this.handleFriendPopupClickEvent("loadProfileContainer")}>
+                                    <img src={require('../../images/author-page.jpg')} alt='' 
+                                        className="profileIcon" />
+                                        
+                                </span>
 
-                            <Glyphicon glyph="search" className="iconContainer searchIcon1" onClick={()=>this.handleFriendPopupClickEvent("loadSearchContainer")}/>
+                                <span className="author-title" onClick={()=>this.handleFriendPopupClickEvent("loadProfileContainer")}>
+                                    James Spiegel <i className="arrow down"></i> <br/>
+                                    <span className="autherSubTitle">Space Cowboy </span>
+                                </span>
+
+                            </div>
+
                             
-                            <span className="iconContainer profileIconDetails" onClick={()=>this.handleFriendPopupClickEvent("loadProfileContainer")}>
-                                <img src={require('../../images/author-page.jpg')} alt='' 
-                                    className="profileIcon" />
-                                    
-                            </span>
-
-                            <span className="author-title" onClick={()=>this.handleFriendPopupClickEvent("loadProfileContainer")}>
-                                James Spiegel <i className="arrow down"></i> <br/>
-                                <span className="autherSubTitle">Space Cowboy </span>
-                            </span>
-
                         </div>
-
-                        <Image src={require('../../images/messageIcon.ico')}
-                            bsStyle = "default" 
-                            className = "chatIcon clear"
-                        />
                     </div>
-					
+					<Image src={require('../../images/messageIcon.ico')}
+                        bsStyle = "default" 
+                        className = "chatIcon clear"
+                        onClick={()=>this.handleFriendPopupClickEvent("loadChatContainer")}
+                    />
 			    </Row>
+                
                 <div className="containerToLoad">
                     <Row>
                         { this.state.searchFieldPopUp &&
@@ -196,10 +216,12 @@ class Header extends React.Component {
                             /> }
                     </Row>
 
-
-                   
-
-                    
+                    <Row>
+                        {
+                            this.state.loadChatContainer && 
+                            <ChatViewComponent />
+                        }
+                    </Row>                    
                 </div>
                 
             </Fragment>
@@ -208,11 +230,11 @@ class Header extends React.Component {
 }
 
 /*
- <Row>
-                        { this.state.profileSettings && 
-                            <ProfileHoverPanel 
-                            /> }
-                    </Row>
+    <Row>
+        { this.state.profileSettings && 
+            <ProfileHoverPanel 
+        /> }
+    </Row>
 */
 
 

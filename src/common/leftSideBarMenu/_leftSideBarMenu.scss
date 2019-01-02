@@ -1,29 +1,51 @@
 .leftmenu img {
     background: white;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    margin: 15px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin: 12px;
     border-radius: 48px;
-    //left: -10px;
     position: relative;
 }
 
 .sidebar {
 	width: 70px;
-	height:100vh;
+	height:70px;
 	background: white;
     left: 0px;
-    margin: 0px;
-    padding: 5px;
     position: fixed;
     transition: transform 0.5s linear;
-
 }
 
 
+ul.leftMenuDetails > li:first-child{
+    margin-top: 30px
+}
+
+.nav>li>a:first-child{
+    padding:0px;
+}
+.sideBarTitle{
+    font-size: 16px;
+    color: grey;
+}
+.main-logo-container{
+    background: #ff5e3a !important;
+    img.mainLogo{
+        width: 70px;
+        height: 70px;
+        padding:17px;
+        
+        background: #ff5e3a !important;
+    }
+}
+.main-title{
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+}
+
 .sidebar.green {
-	/*transition: transform 0.5s linear;*/
 	background-color: white;
 	width:250px;
 
@@ -31,39 +53,68 @@
 
 .alignSidebar{
     max-width: 70px;
-    height: 100%;
+    height: 70px;
     position: fixed;
-    top: 70px
+    z-index: 999;
 }
 
+.nav-item.leftmenu{
+    a {
+        display: inline
+    }
+}
+
+
+.nav-link{
+    display: inline-block !important;
+}
+
+// .nav-item.leftmenu{
+//     position:relative;
+//     //left:-20px;
+// }
+.nav>li>a:focus, .nav>li>a:hover{
+    background:none;
+}
 // .alignSidebar , .alignChatMenu {
 //     display: none;
 // }
 
 @media only screen and (min-width : 320px) and (max-width : 480px) {
     
-    .mainLogo:checked + .alignSidebar{
-        display: block
+    .leftMenuDetails{
+        display: none;
+        height: 100vh;
+        background:white;
     }
+    .main-logo-container:link, .main-logo-container:hover  + .nav.flex-column.leftMenuDetails {
+        display: block !important;
+        height: 100vh !important;
+        background:white;
+    }
+    
 }
 @media only screen and (min-width : 481px) and (max-width : 767px) {
-    
-    .mainLogo:checked + .alignSidebar{
-        display: block
+    .leftMenuDetails{
+        display: none;
+        height: 100vh;
+        background:white;
     }
+    .main-logo-container:link, .main-logo-container:hover  + .nav.flex-column.leftMenuDetails {
+        display: block !important;
+        height: 100vh !important;
+        background:white;
+    }
+    
 }
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
+    .leftMenuDetails{
+        display: block;
+        height: 100vh;
+        background:white;
+    }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1280px)  {
 }
 @media only screen and (min-width: 1281px) {
-}
-
-.nav-link{
-    display: inline-block !important;
-}
-
-.nav-item.leftmenu{
-    position:relative;
-    left:-20px;
 }

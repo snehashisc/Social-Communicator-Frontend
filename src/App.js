@@ -15,10 +15,17 @@ import VideosGallery from './component/videos/VideosGallery';
 
 const AppRouter = () => (
   <Fragment>
+  
       <Header />
-      <LeftSideBarMenu />
-      <ChatMenuBar />
-        <Switch>
+      
+      
+        
+  </Fragment>
+);
+
+//<ChatMenuBar />
+/*
+<Switch>
           <Route exact path="/" render={() => (
               <Redirect to="/profile"/>
           )}/>
@@ -29,8 +36,6 @@ const AppRouter = () => (
           <Route path="/photosList" name="PhotosGallery" component={PhotosGallery} />
           <Route path="/videosList" name="VideosGallery" component={VideosGallery} />
         </Switch>
-  </Fragment>
-);
-
+*/
 
 export default AppRouter;

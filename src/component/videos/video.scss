@@ -1,3 +1,21 @@
 .video-height{
 	height:auto!important;
 }
+
+
+.photo-album-item {
+    .image-content-video {
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        bottom:120px !important;
+        right: 25px;
+        
+    }
+    &:hover {
+        .image-content-video {
+          opacity: 1;
+        }
+        
+    }
+}

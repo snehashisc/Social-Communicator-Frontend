@@ -1,0 +1,50 @@
+.chat-view{
+	width: 35%;
+	background:white;
+    height: 250px;
+}
+
+.chat-title-view{
+	background-color:#7c5ac2;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+    .glyphicon.glyphicon-remove{
+    	position: relative;
+	    top: 15px;
+	    color: white;
+	    font-size: 20px;
+    }
+}
+
+.send-message-form{
+	position: relative;
+    top: 80px;
+}
+.send-message-form input[type=text]{
+	width: 100%;
+    height: 50px;
+
+}
+
+.chat-title{
+	font-size: 20px;
+    left: 20px;
+    position: relative;
+    color: white;
+    top: 10px;
+}
+
+.test:after {
+	content: '\2807';
+  	font-size: 30px;
+}
+.test{
+	transform: rotate(-90deg);
+    width: 10px;
+    height: 10px;
+    color: white;
+    position: relative;
+    top: 20px;
+
+}

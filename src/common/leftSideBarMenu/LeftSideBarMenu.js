@@ -1,6 +1,6 @@
-import React from 'react';
+import React , { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Image } from 'react-bootstrap';
 
 
 import './_leftSideBarMenu.scss';
@@ -30,12 +30,12 @@ class LeftSideBarMenu extends React.Component {
     render() {
         return (
             <Navbar fluid className="alignSidebar"  >
+                
                 <SideBarRendering listData={this.state.routeData} />
             </Navbar>
         )
     }
 };
-
 
 class SideBarRendering extends React.Component {
     
@@ -60,7 +60,7 @@ class SideBarRendering extends React.Component {
         }
         var listItems = this.props.listData.map(function(data, index){
             return (
-                <li className="nav-item leftmenu" key={data.name} >
+                <li className="nav-item leftmenu" key={data.name}  >
                     <Link to={data.path}> 
                         <img src={data.imagePath} alt='' />
                     </Link>
@@ -73,14 +73,44 @@ class SideBarRendering extends React.Component {
         },this);
 
         return (
-            <div className={boxClass.join(' ')}>
-                <ul className="nav flex-column leftMenuDetails">
-                    {listItems}
-                </ul>
-            </div>
+            <Fragment>
+                
+                <div className={boxClass.join(' ')}>
+                    
+                    <div className="main-logo-container">
+                        <Image  src = "../images/logo.png" 
+                            bsStyle = "default" 
+                            className = "mainLogo clear" 
+                            onClick={this.handleClick.bind(null,0)}
+                        />
+                        { this.state.addClass &&
+                            <span className="nav-link active sideBarTitle main-title">Olympus</span>
+                        }
+                    </div>
+                    
+                    <ul className="nav flex-column leftMenuDetails">
+                        
+                        {listItems}
+                    </ul>
+                </div>
+            </Fragment>
+
         );
     }
 };
 
-//onClick={this.handleClick.bind(null,index)} 
+/*
+
+    <li className="nav-item leftmenu" onClick={this.handleClick.bind(null,0)}>
+                        <a href="#/">
+                            <Image  src = "../images/logo.png" 
+                                bsStyle = "default" 
+                                className = "mainLogo clear" 
+                            />
+                            { this.state.addClass &&
+                                <span className="nav-link active sideBarTitle main-title">Olympus</span>
+                            }
+                        </a>
+                    </li>
+*/
 export default LeftSideBarMenu;
