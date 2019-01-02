@@ -9,7 +9,7 @@ class PhotosGallery extends React.Component {
 
     render() {
         const photoAlbums = this.props.albums;
-        console.log("photo albums", photoAlbums);
+        console.log("photo albums", this.props);
         return (
             <div>
                 <PhotoGalleryHeader/>
@@ -42,14 +42,15 @@ class PhotosGallery extends React.Component {
 
 const mapStateToProps = state => {
     return {
-      albums: state.photoAlbumReducer
+      albums: state.photoAlbumReducer,
+      login: state.loginReducer
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         increaseAlbumLike: (id) => dispatch ({type: "INCREASE_ALBUM_LIKES", value: 1,id: id}),
-        decreaseAlbumLike: () => dispatch ({type: "DECREASE_ALBUM_LIKES", value: 1})
+        decreaseAlbumLike: () => dispatch ({type: "DECREASE_ALBUM_LIKES", value: 1}),
     }
 }
 

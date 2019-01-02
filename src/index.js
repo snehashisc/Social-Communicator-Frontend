@@ -9,6 +9,7 @@ import './sass/main.scss';
 import rootReducer from './reducers/rootReducer';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import * as loginActions from './actions/loginAction';
 import * as aboutActions from './actions/aboutActions';
 import * as friendsActions from './actions/friendsActions';
 import * as photoAlbumAction from './actions/photoAlbumAction';
@@ -18,6 +19,7 @@ import * as videoAlbumAction from './actions/videoAlbumAction';
 import {HashRouter, Switch} from 'react-router-dom';
 
 const store = createStore(rootReducer);
+//store.dispatch(loginActions.loginAction());
 store.dispatch(aboutActions.getAbout());
 store.dispatch(friendsActions.getFriends());
 store.dispatch(photoAlbumAction.photoAlbumAction());
