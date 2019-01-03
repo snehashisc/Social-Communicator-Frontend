@@ -18,13 +18,14 @@ const leftSidebarRoutes = [
   { path: '/friendsList', exact: true, name: 'NewsFeed', component: {FriendsGallery} , imagePath : require("../../images/newsfeed.png") },
   { path: '/videosList', exact: true, name: 'Fav Pages Feed', component: {VideosGallery} , imagePath : require("../../images/star.png") },
   { path: '/photosList', exact: true, name: 'FriendGroups', component: {PhotosGallery} , imagePath : require("../../images/conference.png") },
+  { path: '/calenderAndEvents', exact: true, name: 'CalenderAndEvents', component: {CalenderAndEvents} , imagePath : require("../../images/calendar.png") },
   { path: '/', exact: true, name: 'Music & Playlits', component: "Header" , imagePath : require("../../images/headphones.png") },
   { path: '/', exact: true, name: 'Weather App', component: "Header" , imagePath : require("../../images/storm.png") },
 //   { path: '/', exact: true, name: 'Calendar and Events', component: "Header" , imagePath : require("../../images/calendar.png") },
   { path: '/', exact: true, name: 'Community Badges', component: "Header" , imagePath : require("../../images/calendar.png") },
   { path: '/', exact: true, name: 'Friends Birthdays', component: "Header" , imagePath : require("../../images/birthday.png") },
   { path: '/', exact: true, name: 'Account Stats', component: "Header" , imagePath : require("../../images/statistics.png") },
-  { path: '/calenderAndEvents', exact: true, name: 'CalenderAndEvents', component: {CalenderAndEvents} , imagePath : require("../../images/calendar.png") },
+  
   
 ];
 

@@ -3,12 +3,10 @@ import React from  'react';
 // import './friends.scss';
 // import {connect} from 'react-redux';
 
-
+import './calender.scss'
 
 class CalenderAndEvents extends React.Component {
-    constructor(){
-        
-    }
+    
     render(){
         return(
             <div className="calenderAndEvents">

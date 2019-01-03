@@ -10,6 +10,9 @@ import FriendsGallery from './component/friends/FriendsGallery';
 import PhotosGallery from './component/photosComp/PhotosGallery';
 import VideosGallery from './component/videos/VideosGallery';
 
+import CalenderAndEvents from './component/calenderAndEvents/CalenderAndEvents';
+
+
 
 const AppRouter = () => (
   <Fragment>
@@ -22,6 +25,7 @@ const AppRouter = () => (
           <Route path="/friendsList" exact name="FriendsGallery" component={FriendsGallery} />
           <Route path="/photosList" exact name="PhotosGallery" component={PhotosGallery} />
           <Route path="/videosList" exact name="VideosGallery" component={VideosGallery} />
+          <Route path="/calenderAndEvents" exact name="CalenderAndEvents" component={CalenderAndEvents} />
         </Switch>
 		  </HashRouter> 
   </Fragment>
