@@ -7,6 +7,7 @@ import { Navbar} from 'react-bootstrap';
 import FriendsGallery from '../../component/friends/FriendsGallery';
 import PhotosGallery from '../../component/photosComp/PhotosGallery';
 import VideosGallery from '../../component/videos/VideosGallery';
+import CalenderAndEvents from '../../component/calenderAndEvents/CalenderAndEvents';
 
 import Timeline from '../../component/timelineComp/Timeline';
 
@@ -19,10 +20,11 @@ const leftSidebarRoutes = [
   { path: '/photosList', exact: true, name: 'FriendGroups', component: {PhotosGallery} , imagePath : require("../../images/conference.png") },
   { path: '/', exact: true, name: 'Music & Playlits', component: "Header" , imagePath : require("../../images/headphones.png") },
   { path: '/', exact: true, name: 'Weather App', component: "Header" , imagePath : require("../../images/storm.png") },
-  { path: '/', exact: true, name: 'Calendar and Events', component: "Header" , imagePath : require("../../images/calendar.png") },
+//   { path: '/', exact: true, name: 'Calendar and Events', component: "Header" , imagePath : require("../../images/calendar.png") },
   { path: '/', exact: true, name: 'Community Badges', component: "Header" , imagePath : require("../../images/calendar.png") },
   { path: '/', exact: true, name: 'Friends Birthdays', component: "Header" , imagePath : require("../../images/birthday.png") },
   { path: '/', exact: true, name: 'Account Stats', component: "Header" , imagePath : require("../../images/statistics.png") },
+  { path: '/calenderAndEvents', exact: true, name: 'CalenderAndEvents', component: {CalenderAndEvents} , imagePath : require("../../images/calendar.png") },
   
 ];
 
