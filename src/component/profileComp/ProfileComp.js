@@ -2,7 +2,9 @@ import React,{Fragment} from 'react';
 
 import ProfileRoutes from './ProfileRoutes.js';
 import { Link } from 'react-router-dom';
-
+import Header  from '../../common/header/Header.js';
+import LeftSideBarMenu  from '../../common/leftSideBarMenu/LeftSideBarMenu.js';
+import ChatMenuBar  from '../../common/chatMenu/chatMenuBar.js';
 import './ProfileComp.scss';
 
 
