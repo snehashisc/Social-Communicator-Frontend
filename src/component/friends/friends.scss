@@ -137,66 +137,71 @@
     position: relative;
     width: 200px;
     height: 180px !important;
-  }
-  
-  ol.carousel-indicators  {
-    position: absolute;
-    bottom: 0;
-    margin: 0;
-    left: 0;
-    right: 0;
-    width: auto;
-    bottom: -90px;
-    li{
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background-color: #fff;
-        margin: auto 10px;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 2px solid #d9dbe7;
-        top:120px;
+    ol.carousel-indicators  {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        bottom: -90px;
+        li{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            margin: auto 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #d9dbe7;
+            top:35px;
+            bottom: 5px;
+        }
+        
     }
+    ol.carousel-indicators  li.active {
+        background: wheat;
+        margin: 0 5px;
     
-  }
-
-  ol.carousel-indicators  li.active {
-    background: wheat;
-    margin: 0 5px;
-
-  }
-
-.carousel-inner-friend {
-    margin-bottom: 25px;
-    font-size: 14px;
-    .title{
-        color: #9a9fbf;
+      }
+    
+    .carousel-inner-friend {
         margin-bottom: 25px;
-    }
-    .friend-about{
-        color: #9a9fbf;
-        margin-bottom: 25px;
-        font-size: 13px
-    }
-
-    .friend-since{
-        span{
+        font-size: 14px;
+        .title{
             color: #9a9fbf;
-            margin-bottom: 25px !important;
-        } 
-        .h6 {
-            font-size: 15px;
-            margin-top: 0px;
-        }   
+            margin-bottom: 25px;
+        }
+        .friend-about{
+            color: #9a9fbf;
+            margin-bottom: 25px;
+            font-size: 13px
+        }
+    
+        .friend-since{
+            span{
+                color: #9a9fbf;
+                margin-bottom: 25px !important;
+            } 
+            .h6 {
+                font-size: 15px;
+                margin-top: 0px;
+            }   
+        }
+        
+    }
+    
+    .carousel slide{
+        position: relative;
+    }
+
+    .carousel {
+        height: 80px;
     }
     
 }
 
-.carousel slide{
-    position: relative;
-}
-
+  
 /* .more:after {
   content: '\2807';
   font-size: 30px;

@@ -19,8 +19,7 @@ class AboutPage extends React.Component{
 		const about = this.props.about;
 		console.log("Props",about.personalInfo);
 		return (
-			<Fragment>
-			<div className="container">
+			<div>
 				<div className="row">
 					<div className="col col-xl-4 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12 about-background">
 					    <PersonalInfo info={about.personalInfo} title="Personal Info"/>
@@ -30,18 +29,8 @@ class AboutPage extends React.Component{
 						<EducationAndEmployement info={about.educationAndEmployement} title="Education and Employment"/>
 					</div>
 					
-				</div>
-				
-				
+				</div>				
 			</div>
-			<div className="container">
-				<div className="row">
-				<div className="col col-xl-4 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12">
-					    <Weather />
-					</div>
-					</div>
-					</div>
-			</Fragment>
 		);
 	}
 }	
