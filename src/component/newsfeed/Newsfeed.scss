@@ -5,3 +5,7 @@
 .react-calendar {
     font-size: 12px;
 }
+
+.react-calendar__month-view__days__day--weekend {
+    color: gray;
+}

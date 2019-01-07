@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter,HashRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import Profile from './component/profileComp/ProfileComp';
 import Header  from './common/header/Header.js';
@@ -17,10 +17,11 @@ const AppRouter = () => (
     <Header />
     <LeftSideBarMenu />
     <ChatMenuBar />
-    <HashRouter>
+    <Profile/>
+    <HashRouter> 
         <Switch>
-          <Route path="/" exact name="Home" component={Profile} />
-          <Route path="/newsfeed" exact name="FriendsGallery" component={NewsFeed} />
+          {/* <Route path="/" exact name="Home" component={Profile} /> */}
+          <Route path="/newsfeed" exact name="NewsFeed" component={NewsFeed} />
           <Route path="/photosList" exact name="PhotosGallery" component={PhotosGallery} />
           <Route path="/videosList" exact name="VideosGallery" component={VideosGallery} />
         </Switch>
