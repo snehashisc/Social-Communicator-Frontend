@@ -14,7 +14,7 @@
 
 .eventsButton{
     display: grid;
-    width: 100%;
+    max-width: 100%;
     height: 50px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -23,15 +23,15 @@
     font-size: 10px;
     font-weight: bold;
     align-items: stretch;
-
+    overflow-x: hidden;
     .btn.btn-primary{
         height: 60px;
         top: 5%;
-        width: 106%;
+        max-width: 100%;
         font-size: 20px;
         font-weight: bold;
-        position: relative;
-        left: -13px;
+        //position: relative;
+        //left: -13px;
     }
 
 }
@@ -46,7 +46,7 @@
     align-self: center;
     margin: 10px 0px 0px 30px;
     align-items: stretch;
-
+    overflow-x: hidden;
     .friendContainer{
         display: grid;
         height: 90px;
@@ -141,22 +141,41 @@
 .mainPopOverContainer{
     display: block;
     top: 80px !important;
-    max-width: 70% !important;
+    //max-width: 70% ;
     max-height: 60%;
+    z-index: 0;
+}
+
+.popover.right {
+    margin-left: 0% !important;
 }
 @media only screen and (min-width : 320px) and (max-width : 480px) {
     
+    .mainPopOverContainer{
+        max-width: 100% !important;
+    }
+    .popover.right {
+        margin-left: 0% !important;
+    }
 }
 
 @media only screen and (min-width : 481px) and (max-width : 767px) {
-    
+    .mainPopOverContainer{
+        max-width: 100% !important;
+    }
+    .popover.right {
+        margin-left: 0% !important;
+    }   
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
     .mainPopOverContainer{
-        left:56%;
+        max-width: 100% !important;
     }
+    .popover.right {
+        margin-left: 0% !important;
+    } 
 }
 
 

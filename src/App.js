@@ -26,16 +26,16 @@ const AppRouter = () => (
 //<ChatMenuBar />
 /*
 <Switch>
-          <Route exact path="/" render={() => (
-              <Redirect to="/profile"/>
-          )}/>
-   
-          <Route path="/" exact name="Home" component={Profile} />
-          <Route path="/profile"  name="Home1" component={Profile} />
-          <Route path="/friendsList" name="FriendsGallery" component={FriendsGallery} />
-          <Route path="/photosList" name="PhotosGallery" component={PhotosGallery} />
-          <Route path="/videosList" name="VideosGallery" component={VideosGallery} />
-        </Switch>
+    <Route exact path="/" render={() => (
+        <Redirect to="/profile"/>
+    )}/>
+
+    <Route path="/" exact name="Home" component={Profile} />
+    <Route path="/profile"  name="Home1" component={Profile} />
+    <Route path="/friendsList" name="FriendsGallery" component={FriendsGallery} />
+    <Route path="/photosList" name="PhotosGallery" component={PhotosGallery} />
+    <Route path="/videosList" name="VideosGallery" component={VideosGallery} />
+  </Switch>
 */
 
 export default AppRouter;
