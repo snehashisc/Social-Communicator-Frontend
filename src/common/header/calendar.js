@@ -16,4 +16,4 @@ const MyCalendar = props => (
   </div>
 )
 
-exports default MyCalendar;
+export default MyCalendar;

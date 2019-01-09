@@ -12,11 +12,11 @@ class DefaultLayout extends React.Component{
 		return(
 			 <Fragment>
 		      	<div className="container">
-				  	<Route path="/" component={Timeline} />
-                    <Route path="/about" component={AboutPage} />
-                    <Route path="/friends" component={FriendsGallery} />
-					<Route path="/photos" component={PhotosGallery} />
-					<Route path="/videos" component={VideosGallery} />
+				  	<Route exact path="/timeline" component={Timeline} />
+                    <Route exact path="/about" component={AboutPage} />
+                    <Route exact path="/friends" component={FriendsGallery} />
+					<Route exact path="/photos" component={PhotosGallery} />
+					<Route exact path="/videos" component={VideosGallery} />
                 </div>
 		    </Fragment>
 		)

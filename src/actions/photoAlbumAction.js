@@ -4,4 +4,3 @@ export const photoAlbumAction = () => ({
   type: 'GET_ALBUMS',
   albums: photoAlbums
 });
-

@@ -1,0 +1,84 @@
+.weather {
+    background-image: url(../../../images/bg-wethear.jpg);
+    padding: 25px;
+    position: relative;
+    color: #fff;
+    background-color: #38a9ff;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 240px;
+    text-align: center;
+    .currWeather {
+        margin-top: 10px;
+        .maxminTemp {
+            margin-right: 20px;
+    
+            span {
+                display: block;
+                font-size: 11px;
+            }
+        }
+        .tempSensor {
+            font-size: 60px;
+            line-height: 1;
+            
+        }
+        /* to put degree symbol
+        .tempSensor::after {
+            content: "\00b0"
+        }
+        */
+        .glyphicon.glyphicon-cloud{
+            font-size: 70px;
+        }
+    }
+    .description {
+        span {
+            font-size: 11px;
+        }
+        span+span {
+            margin-left: 8px;
+        }
+    }
+    .climate {
+        font-size:18px;
+    }
+    .weekly-forecast {
+        margin-right: -25px;
+        margin-left: -25px;
+        position: relative;
+        padding: 0 20px;
+            li {
+                display: inline-block;
+                vertical-align: top;
+                padding: 15px 3px;
+                text-transform: uppercase;
+                font-size: 10px;
+                font-weight: 700;
+            }
+            li > * {
+                margin-bottom: 8px;
+            }
+    }
+    .date {
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 0;
+        font-size: 15px;
+    }
+    .place {
+        font-size: 11px;
+    }
+}
+
+.inline-items > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.weather > * {
+    margin-bottom: 25px;
+}
+.weather:last-child {
+    margin-bottom: 0;
+}
