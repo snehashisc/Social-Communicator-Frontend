@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import './App.scss';
 import PrivateRoute from './common/authentication/Authenticator';
 import Login from './component/login/Login';
-import LoginForm from './component/login/LoginForm';
 import Profile from './component/profileComp/ProfileComp';
 import Header  from './common/header/Header.js';
 import LeftSideBarMenu  from './common/leftSideBarMenu/LeftSideBarMenu.js';
@@ -22,8 +21,8 @@ class AppRouter extends React.Component  {
           { this.props.login.isAuthenticated ? <div><Header /> <LeftSideBarMenu /> <ChatMenuBar /> <Profile/> </div> : null }        
           <HashRouter>
               <Switch>
-                <Route path="/login" exact name="Login" component={LoginForm} />
-                <Route path="/" exact name="Login" component={LoginForm} />
+                <Route path="/login" exact name="Login" component={Login} />
+                <Route path="/" exact name="Login" component={Login} />
                 <PrivateRoute path="/friendsList"  component={FriendsGallery} />
                 <PrivateRoute path="/photosList"  component={PhotosGallery} />
                 <PrivateRoute path="/videosList" component={VideosGallery} />
