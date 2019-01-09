@@ -16,7 +16,7 @@ import {
     Badge,
 } from 'react-bootstrap'
 
-//import ProfileHoverPanel from '../popups/profileSettings/ProfileHoverPanel.js'
+import ProfileHoverPanel from '../popups/profileSettings/ProfileHoverPanel.js'
 
 import NavBarPopup from '../popups/navBarPopOverItem/NavBarPopup.js'
 import LeftSideBarMenu  from '../leftSideBarMenu/LeftSideBarMenu.js';
@@ -221,7 +221,12 @@ class Header extends React.Component {
                             this.state.loadChatContainer && 
                             <ChatViewComponent />
                         }
-                    </Row>                    
+                    </Row> 
+                    <Row>
+                        { this.state.profileSettings && 
+                            <ProfileHoverPanel 
+                        /> }
+                    </Row>                   
                 </div>
                 
             </Fragment>
@@ -230,11 +235,7 @@ class Header extends React.Component {
 }
 
 /*
-    <Row>
-        { this.state.profileSettings && 
-            <ProfileHoverPanel 
-        /> }
-    </Row>
+
 */
 
 

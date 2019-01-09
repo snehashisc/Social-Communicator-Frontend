@@ -1,6 +1,10 @@
 import React , { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Image } from 'react-bootstrap';
+import Media from 'react-media';
+
+
+import ProfileHoverPanel from '../popups/profileSettings/ProfileHoverPanel.js';
 
 
 import './_leftSideBarMenu.scss';
@@ -17,6 +21,8 @@ const leftSidebarRoutes = [
   { path: '/', exact: true, name: 'Friends Birthdays', imagePath : require("../../images/birthday.png") },
   { path: '/', exact: true, name: 'Account Stats', imagePath : require("../../images/statistics.png") },
 ];
+
+
 
 class LeftSideBarMenu extends React.Component {
     constructor(){
@@ -87,17 +93,50 @@ class SideBarRendering extends React.Component {
                             <span className="nav-link active sideBarTitle main-title">Olympus</span>
                         }
                     </div>
+                    { 
+                        this.state.addClass &&
+                        <Media
+                            query="(max-width: 768px)"
+                            render={() => 
+                                <ul className="nav flex-column leftMenuDetails">
+                                    <li>
+                                        <span className="profile-details">
+                                            <img src={require('../../images/author-page.jpg')} alt='' 
+                                                className="profileIcon-mobile" />
+                                            <span>
+                                                <span className="author-name-mobile">James Spiegel  </span><br />
+                                                <span className="autherSubTitle-mobile">Space Cowboy </span>
+                                            </span>
+                                        </span>
+                                        <div className="main-section-mobile">Main Sections</div>
+                                    </li>
+
+                                    {listItems}
+
+                                    <ProfileHoverPanel />
+                                    
+                                </ul>
+                            }
+                        />
+                    }
+
                     
-                    <ul className="nav flex-column leftMenuDetails">
-                        
-                        {listItems}
-                    </ul>
+                    <Media
+                        query="(min-width: 768px)"
+                        render={() => 
+                            <ul className="nav flex-column leftMenuDetails">
+                                {listItems}
+                            </ul>
+                        }
+                    />
                 </div>
             </Fragment>
 
         );
     }
 };
+
+
 
 /*
 
