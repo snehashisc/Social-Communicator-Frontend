@@ -1,6 +1,79 @@
 .login-form {
-    .form-control {
+    .logowrapper {
+        display: block;
+        padding: 30px 0;
         position: relative;
-        top: 3px;
+        color: wheat;
+        margin-left: 70px;
+        top: -12px;
     }
+
+    .form-group {
+        position: relative;
+        top: -92px;
+        float: right;
+        //left: -260px;
+    }
+    .user-name {
+        left: -260px;
+    }
+
+    .keep-sign-in {
+        top: -58px;
+        left: -84px;
+    }
+
+    .forgot-pwd {
+        top: -45px;
+        left: 172px;
+        color: white;
+        font-size:11px;
+        width:164px;
+        cursor:pointer;
+    }
+    background-color:  #e68a00;
+    height: 70px;
+
+    .login-button {
+        position:relative;
+        float: right;
+        width:45px;
+        height:18px;
+        background-color: #5b72a9;
+        border: 1px solid #999;
+        border-color:#8b9dc3 #2f477a #29447e #1a356e;
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+        cursor:pointer;
+        font-size:11px;
+        font-weight:bold;
+        text-align:center;
+        color:#fff;
+        left: 320px;
+        top: -71px;
+    }
+
+    .login-input {
+        color:#fff;
+        font-size:11px;
+        width:164px;
+        cursor:pointer;
+    }
+
+    
+}
+
+.registartion-form {
+    float: right;
+    position: relative;
+    left: 355px;
+    input {
+        width: 237px;
+        height: 26px;
+    }
+
+    .registration-button {
+        margin-top: 7px;
+        width: 94px;
+    }
+    
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect} from 'react-router-dom';
 import { connect } from 'react-redux';
+import Registrationform from './Registration';
 import { Field, reduxForm } from 'redux-form';
 import {RenderInput} from '../../common/forms/CreateFormField';
 import {
@@ -45,21 +46,30 @@ class Login extends React.Component {
         const { handleSubmit, submitting } = this.props 
 
         return (
-            
-            <form onSubmit = {handleSubmit (alertName)}>
-                <div className="col-md-6 col-md-offset-3 login-form">
-                    <h2>Login</h2>
-                    <div className = "form-group">
-                        <Field  name= "username" label="Username" component = {RenderInput}/>
-                    </div>
-                    <div className = "form-group">
-                        <Field  name= "password" label="Password" component = {RenderInput}/>
-                    </div>
+            <div>
+                <form onSubmit = {handleSubmit (alertName)}>
+                    <div className="login-form">
+                        <h1 className="logowrapper">Login</h1>
+                        <div className = "form-group user-name">
+                            <Field  name= "username" label="Username" placeHolder= "Username" classNameForlabel= "login-input" component = {RenderInput}/>
+                        </div>
+                        <div className = "form-group pwd">
+                            <Field  name= "password" label="Password" placeHolder= "Password" classNameForlabel= "login-input" classNameForElement="pwd-element" component = {RenderInput}/>
+                        </div>
 
-                    <button className="btn btn-primary" type="submit" disabled = {submitting}>Login</button>
+                        <div class=" form-group keep-sign-in">
+                            <Field  type="checkbox" inputText = "Keep me signed in" component = {RenderInput}/>
+                        </div>
+                        <div class=" form-group forgot-pwd">Forgot your password?</div>
+    
+
+                        <button className="btn btn-primary login-button" type="submit" disabled = {submitting}>Login</button>
+                    </div>
+                </form>
+                <div className="registartion-form">
+                    <Registrationform/>
                 </div>
-            </form>
-
+            </div>
         );
     }
 }

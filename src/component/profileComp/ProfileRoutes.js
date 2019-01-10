@@ -1,6 +1,6 @@
 import React ,{Fragment}from 'react';
 import { Route } from 'react-router-dom';
-
+import PrivateRoute from '../../common/authentication/Authenticator';
 import Timeline from '../timelineComp/Timeline';
 import AboutPage from '../about/AboutPage';
 import FriendsGallery from '../friends/FriendsGallery';
