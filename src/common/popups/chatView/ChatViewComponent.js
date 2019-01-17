@@ -16,8 +16,8 @@ class ChatViewComponent extends React.Component {
         <div className="chat-view">
           <div className="chat-title-view">
             <span className="chat-title"> Chat</span>
-            <span class="test"></span>
-            <span class="glyphicon glyphicon-remove"></span>
+            <span className="test"></span>
+            <span className="glyphicon glyphicon-remove"></span>
           </div>
           <ChatListComponent />
           <SendMessageForm />

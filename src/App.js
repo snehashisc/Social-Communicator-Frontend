@@ -6,7 +6,7 @@ import './App.scss';
 import Profile from './component/profileComp/ProfileComp';
 import Header  from './common/header/Header.js';
 import LeftSideBarMenu  from './common/leftSideBarMenu/LeftSideBarMenu.js';
-import ChatMenuBar  from './common/chatMenu/chatMenuBar.js';
+import ChatMenuBar  from './common/chatMenu/ChatMenuBar.js';
 
 import FriendsGallery from './component/friends/FriendsGallery';
 import PhotosGallery from './component/photosComp/PhotosGallery';

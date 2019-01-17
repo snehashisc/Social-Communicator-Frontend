@@ -1,7 +1,7 @@
 
 .navBarHeadingContainer{
     display: grid;
-    width: 100%;
+    max-width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     align-self: center;
@@ -40,7 +40,7 @@
     display: grid;
     height: 290px;
     overflow: auto;
-    width: 97%;
+    max-width: 97%;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     align-self: center;
@@ -137,13 +137,15 @@
     bottom: 11px;
 }
 
-
+.popover-content{
+    background:white;
+}
 .mainPopOverContainer{
-    display: block;
-    top: 80px !important;
+    top: 20px !important;
     //max-width: 70% ;
     max-height: 60%;
     z-index: 0;
+    
 }
 
 .popover.right {
@@ -152,6 +154,7 @@
 @media only screen and (min-width : 320px) and (max-width : 480px) {
     
     .mainPopOverContainer{
+        display: flex;
         max-width: 100% !important;
     }
     .popover.right {
@@ -161,16 +164,21 @@
 
 @media only screen and (min-width : 481px) and (max-width : 767px) {
     .mainPopOverContainer{
+        display: flex;
         max-width: 100% !important;
     }
     .popover.right {
         margin-left: 0% !important;
     }   
+    .row{
+        display: block;
+    }
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
     .mainPopOverContainer{
+        display: block;
         max-width: 100% !important;
     }
     .popover.right {
@@ -181,6 +189,7 @@
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px)  {
     .mainPopOverContainer{
+        display: block;
         left:56%;
     }
 }

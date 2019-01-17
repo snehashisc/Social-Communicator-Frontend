@@ -12,6 +12,10 @@
     background: #7c5ac2;
 
 }
+.profilemenu{
+    display: block;
+    width: 200px
+}
 .wholeContainer{
     display: grid;
     align-items: stretch;
@@ -104,7 +108,7 @@
     top: 7px;
 }
 @media only screen and (min-width : 320px) and (max-width : 480px){
-    .searchContainer , .author-title , .profileIconDetails{
+    .searchContainer , .author-title , .profileIconDetails, .alignChatMenu{
         display: none !important;
     }
     .notificationContainer{
@@ -121,7 +125,7 @@
 
 }
 @media only screen and (min-width : 481px) and (max-width : 767px) {
-    .searchContainer , .author-title , .profileIconDetails{
+    .searchContainer , .author-title , .profileIconDetails, .alignChatMenu{
         display: none !important;
     }
     .notificationContainer{
@@ -145,7 +149,7 @@
     }
 
     .headerContainer{
-        grid-template-columns: 70px auto;
+        grid-template-columns: 70px auto 70px;
     }
 
     .navSearchFiledAlignment.navbar-form.navbar-left{

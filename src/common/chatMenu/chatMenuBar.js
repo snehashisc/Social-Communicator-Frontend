@@ -1,9 +1,17 @@
-import React from 'react';
+import React ,{ Fragment }from 'react';
 
 import  './chatMenuBar.scss';
 
-import { Navbar} from 'react-bootstrap';
-
+import { 
+    Row,
+    Navbar,
+    Image,
+    FormGroup,
+    FormControl,
+    InputGroup,
+    Glyphicon,
+    Badge
+} from 'react-bootstrap'
 const leftSidebarRoutes = [
   { path: '/', exact: true, name: 'Caroll Summers', component: "Header" , imagePath : require("../../images/avatar67-sm.jpg") },
   { path: '/', exact: true, name: 'Mathilda Blinker', component: "Header" , imagePath : require("../../images/avatar62-sm.jpg") },
@@ -23,9 +31,17 @@ class chatMenuBar extends React.Component {
 
     render() {
         return (
-            <Navbar fluid className="alignChatMenu"  >
-                <SideBarRendering listData={this.state.routeData} />
-            </Navbar>
+            <Fragment>
+                <Navbar fluid className="alignChatMenu"  >
+                    <SideBarRendering listData={this.state.routeData} />
+                    <Image src={require('../../images/messageIcon.ico')}
+                    bsStyle = "default" 
+                    className = "chatIcon1 clear"
+                    onClick={()=>this.handleFriendPopupClickEvent("loadChatContainer")}
+                />
+                </Navbar>
+
+            </Fragment>
         )
     }
 };
@@ -64,11 +80,16 @@ class SideBarRendering extends React.Component {
         },this);
 
         return (
-            <div className={boxClass.join(' ')}>
-                <ul className="nav flex-column leftMenuDetails1">
-                    {listItems}
-                </ul>
-            </div>
+            <Fragment>
+
+                <div className={boxClass.join(' ')}>
+                    <ul className="nav flex-column leftMenuDetails1">
+                        {listItems}
+                    </ul>
+                    
+                </div>
+
+            </Fragment>
         );
     }
 };

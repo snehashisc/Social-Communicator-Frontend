@@ -21,6 +21,7 @@ import ProfileHoverPanel from '../popups/profileSettings/ProfileHoverPanel.js'
 import NavBarPopup from '../popups/navBarPopOverItem/NavBarPopup.js'
 import LeftSideBarMenu  from '../leftSideBarMenu/LeftSideBarMenu.js';
 import ChatViewComponent  from '../popups/chatView/ChatViewComponent.js';
+import ChatMenuBar  from '../chatMenu/ChatMenuBar.js';
 
 //lg , md , sm ,xs
 
@@ -152,11 +153,22 @@ class Header extends React.Component {
                                 <span className={["iconContainer",this.state.friendPopup,"si1"].join(' ')} onClick={()=>this.handleFriendPopupClickEvent("loadFriendContainer")} >
                                     <img src={require('../../images/friendsIcon.png')} alt='' className="socialIcon"/> 
                                     <Badge className="badgeAlignment">15</Badge>
+                                    <Row>
+                                        { this.state.friendPopup && 
+                                            <NavBarPopup 
+                                                heading="FRIEND REQUESTS"
+                                                title="Find Friends"
+                                                settings="Settings"
+                                                buttonColor="#38a9ff"
+                                                buttonText="Check All Events"
+                                            /> }
+                                    </Row>
                                 </span>
                                   
                                 <span className={["iconContainer",this.state.messagePopup,"si2"].join(' ')} onClick={()=>this.handleFriendPopupClickEvent("loadMessageContainer")}>
                                     <img src={require('../../images/messageIcon.ico')} alt='' className="socialIcon"/>
                                     <Badge className="badgeAlignment">45</Badge>
+
                                 </span>
 
                                 <span className="iconContainer">
@@ -169,24 +181,32 @@ class Header extends React.Component {
                                 <span className="iconContainer profileIconDetails" onClick={()=>this.handleFriendPopupClickEvent("loadProfileContainer")}>
                                     <img src={require('../../images/author-page.jpg')} alt='' 
                                         className="profileIcon" />
+                                    <Row className="profilemenu">
+                                        { this.state.profileSettings && 
+                                            <ProfileHoverPanel 
+                                        /> }
+                                    </Row> 
                                         
                                 </span>
 
                                 <span className="author-title" onClick={()=>this.handleFriendPopupClickEvent("loadProfileContainer")}>
                                     James Spiegel <i className="arrow down"></i> <br/>
                                     <span className="autherSubTitle">Space Cowboy </span>
+                                    
                                 </span>
 
                             </div>
 
                             
                         </div>
+                        
                     </div>
 					<Image src={require('../../images/messageIcon.ico')}
                         bsStyle = "default" 
                         className = "chatIcon clear"
                         onClick={()=>this.handleFriendPopupClickEvent("loadChatContainer")}
                     />
+                    <ChatMenuBar/>
 			    </Row>
                 
                 <div className="containerToLoad">
@@ -204,29 +224,14 @@ class Header extends React.Component {
                             </FormGroup> 
                         }
                     </Row>
-
-                    <Row>
-                        { this.state.friendPopup && 
-                            <NavBarPopup 
-                                heading="FRIEND REQUESTS"
-                                title="Find Friends"
-                                settings="Settings"
-                                buttonColor="#38a9ff"
-                                buttonText="Check All Events"
-                            /> }
-                    </Row>
-
+                    
                     <Row>
                         {
                             this.state.loadChatContainer && 
                             <ChatViewComponent />
                         }
                     </Row> 
-                    <Row>
-                        { this.state.profileSettings && 
-                            <ProfileHoverPanel 
-                        /> }
-                    </Row>                   
+                                      
                 </div>
                 
             </Fragment>
