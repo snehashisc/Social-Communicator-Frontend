@@ -1,3 +1,32 @@
 .video-height{
 	height:auto!important;
 }
+/*.test-hover {
+  -webkit-filter: blur(2px);
+  filter: blur(5px);
+}*/
+
+.image-content-more{
+	color:red !important;
+}
+.photo-album-item1 {
+    img {
+        padding: inherit;
+        border-radius:10px 10px 0px 0px;
+    }
+    .image-content-video {
+    	/*display:none;*/
+        position: absolute;
+		
+        z-index: 1;
+    }
+    &:hover {
+        .image-content-video {
+          /*display:inline-block;*/
+        }
+        .test-hover1 {
+          -webkit-filter: blur(2px);
+          filter: blur(5px);
+        }
+    }
+}
